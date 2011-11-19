@@ -3,7 +3,6 @@ package controllers;
 import models.User;
 import play.mvc.*;
 
-@With(Secure.class)
 public class Main extends Controller {
 
     @Before
