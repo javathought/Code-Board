@@ -37,12 +37,9 @@ public class Users extends Admin {
 		
 	}
 	
-	public static void save(String new_password, @Valid User user) {
+	public static void save(String new_password, Boolean isAdmin, @Valid User user) {
 
-		Logger.info("password = %s", new_password);
-		
 		if (new_password != null && !new_password.isEmpty() ) {
-			
 			try {
 				user.hashed_password = hash(new_password); 		
 			} catch (NoSuchAlgorithmException e) {
@@ -62,6 +59,8 @@ public class Users extends Admin {
 		if (user.created_on == null) {
 			user.created_on = Calendar.getInstance().getTime();
 		}
+		Logger.info("admin is " + isAdmin);
+		user.admin = isAdmin;
 		user.save();
 		render("@show", user);
 

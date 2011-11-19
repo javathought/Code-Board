@@ -38,24 +38,32 @@ public class Application extends Main {
 //    	List<Tracker> trackers = Tracker.find("order by position asc").fetch();
 		Project project = Project.find("identifier", identifier).first();
 		List<Issue> issues = Issue.find("byProject", project).fetch();
-    	Logger.info("method issues : Project id %d", project.id);
+//    	Logger.info("method issues : Project id %d", project.id);
     	render(issues, project);
     }
     public static void newIssue(String identifier) {
     	List<Tracker> trackers = Tracker.find("order by position asc").fetch();
 		Project project = Project.find("identifier", identifier).first();
-    	render("@issue", trackers, project);
+		List<User> users = User.find("order by login").fetch();
+    	render("@issue", trackers, project, users);
     }
     
-    public static void saveIssue(Long projectId, Long trackerId, @Valid Issue issue) {
+    public static void saveIssue(Long projectId, Long trackerId, Long assigneeId, @Valid Issue issue) {
         Project project = Project.findById(projectId);
     	List<Tracker> trackers = Tracker.find("order by position asc").fetch();
         if (Validation.hasErrors()) {
             render("@issue", issue, project, trackers);            
         }
+        Logger.info("assignee = %s", issue.assignee);
         Tracker tracker = Tracker.findById(trackerId);
         issue.project = project;
         issue.tracker = tracker;
+        if (assigneeId == null) {
+        	issue.assignee = null;
+        } else {
+	        User assignee = User.findById(assigneeId);
+	        issue.assignee = assignee;
+        }
         issue.updated = Calendar.getInstance().getTime();
         
         issue.save();
@@ -68,7 +76,8 @@ public class Application extends Main {
     	Issue issue = Issue.findById(id);
     	Project project = issue.project;
     	List<Tracker> trackers = Tracker.find("order by position asc").fetch();
-    	render(issue, project, trackers);
+		List<User> users = User.find("order by login").fetch();
+    	render(issue, project, trackers, users);
     	}
     
     

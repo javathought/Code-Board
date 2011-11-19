@@ -58,7 +58,7 @@
 					        <td class="tracker">${issue.tracker.name}</td><td class="status">New</td>
 					        <td class="priority">Normal</td><td class="subject">
 					        <a href="/issues/${issue.id}">${issue.subject}</a></td>
-					        <td class="assigned_to"></td>
+					        <td class="assigned_to">${issue.assignee?.firstname} ${issue.assignee?.lastname}</td>
 					        <td class="updated_on" align="center">${issue.updated?.format('dd/MM/yy hh:mm a')}</td>
 						</tr>
 					#{/list}

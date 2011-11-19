@@ -25,7 +25,7 @@
 			    </li></ul>		
 			</div>
 			#{if session.contains("username")}
-		    <div id="loggedas">Logged in as <a href="/admin/users/1">${username}</a></div>
+		    <div id="loggedas">Logged in as <a href="/admin/users/${username}">${username}</a></div>
 		    #{/if}
 		    
 	        <ul><li><a href="/" class="home">Home</a></li>

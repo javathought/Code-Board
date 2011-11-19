@@ -28,7 +28,7 @@
 		<h2>New Issue</h2>
 		#{/else}
 				
-		#{form @Application.saveIssue(project.id), id:'form', method:'POST', enctype:'multipart/form-data'}
+		#{form @Application.saveIssue(project.id, trackerId, assigneeId), id:'form', method:'POST', enctype:'multipart/form-data'}
 		
 		<!-- div style="margin:0;padding:0;display:inline"><input name="authenticity_token" type="hidden" value="vP16Qzvu8DNmx6DBZczytDcOHScCCkM0YpYT5ZusdGk=" /></div -->
     
@@ -52,16 +52,23 @@
 
 					<p class="field">
 					<fieldset><legend>Description</legend>
-					    <textarea type="text" name="issue.desription" id="description" cols="60" rows="10">${issue?.description}</textarea>
+					    <textarea type="text" name="issue.desription" id="description" cols="130" rows="10">${issue?.description}</textarea>
 					</fieldset>
 					    <!-- span class="error">${errors.forKey('issue.description')}</span -->
 					</p>
+					
+					<p><label for="issue_assignee">Assignee</label>
+					#{select 'assigneeId', items:users, valueProperty:'id', id:'assignee', value:"${issue?.assignee?.id}" }
+					<option> </option>
+					#{/select}
+					</p>
+					
 					
 				</div>
 
 
 
-				<div id="attributes" class="attributes">
+				<!-- div id="attributes" class="attributes">
 			
 		
 					<div class="splitcontentleft">
@@ -74,8 +81,8 @@
 					
 					</div>
 					
-					<div style="clear:both;">
-				</div>
+					<div style="clear:both;" />
+				</div -->
 			</div>
 		
 		</div>
