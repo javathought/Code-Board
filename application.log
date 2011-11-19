@@ -1,0 +1,16 @@
+17:20:50,476 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+17:20:50,479 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+17:20:50,480 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+17:20:50,480 INFO  ~ Module .svn is available (/home/pascal/workspace/codeboard-core/modules/.svn)
+17:20:50,899 WARN  ~ You're running Play! in DEV mode
+17:20:50,955 ERROR ~ Could not bind on port 9090
+17:21:01,489 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+17:21:01,492 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+17:21:01,493 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+17:21:01,493 INFO  ~ Module .svn is available (/home/pascal/workspace/codeboard-core/modules/.svn)
+17:21:01,914 WARN  ~ You're running Play! in DEV mode
+17:21:01,977 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+17:21:20,610 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+17:21:21,125 INFO  ~ Application 'codeboard' is now started !
+17:21:24,127 INFO  ~ Project omtf
+17:21:24,140 INFO  ~ method issues : Project id 1

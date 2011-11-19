@@ -1,0 +1,50 @@
+#{extends 'main.html' /}
+#{set title:project?.name /}
+#{set overviewSelected:'selected' /}
+
+<div id="header">
+	<h1>#{get 'title' /}</h1>
+	<div id="main-menu">
+		#{main-menu project:project /}
+	</div>
+	
+</div>
+
+
+<div class="nosidebar" id="main">
+
+    <div id="sidebar">        
+         
+    </div>
+    
+	<div id="content">    
+
+		<h2>Overview</h2>
+
+		<div class="splitcontentleft">
+		  	<div class="wiki">
+	
+			<p>${project?.description}</p>
+			</div>	
+  
+		    <div class="issues box">    
+			    <h3>Issue tracking</h3>
+			    <ul>
+			    </ul>
+			       <p>
+    	<a href="/projects/${project.identifier}/issues">View all issues</a>
+	    
+			
+		</p>
+		    </div>
+    
+		</div>
+	
+		<div class="splitcontentright">
+
+
+		</div>
+		<div style="clear:both;"></div>
+	</div>
+</div>
+
