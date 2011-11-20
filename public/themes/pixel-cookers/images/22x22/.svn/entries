@@ -1,8 +1,8 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/public/themes/pixel-cookers/images/22x22
+12
+svn://localhost/codeboard/codeboard-core/trunk/public/themes/pixel-cookers/images/22x22
 svn://localhost/codeboard
 
 
@@ -60,40 +60,6 @@ has-props
 
 3794
 
-settings.png
-file
-
-
-
-
-2011-11-19T16:17:59.495875Z
-696424976bf060e5fb26f5fbcd83b5c9
-2011-11-19T14:26:37.189612Z
-2
-pascal
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3451
-
 custom_fields.png
 file
 
@@ -127,6 +93,40 @@ has-props
 
 
 3683
+
+settings.png
+file
+
+
+
+
+2011-11-19T16:17:59.495875Z
+696424976bf060e5fb26f5fbcd83b5c9
+2011-11-19T14:26:37.189612Z
+2
+pascal
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3451
 
 users.png
 file
@@ -230,40 +230,6 @@ has-props
 
 1443
 
-notifications.png
-file
-
-
-
-
-2011-11-19T16:17:59.495875Z
-75bca9b77e33abbd29b15316765fc0ab
-2011-11-19T14:26:37.189612Z
-2
-pascal
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3708
-
 enumerations.png
 file
 
@@ -297,6 +263,40 @@ has-props
 
 
 3583
+
+notifications.png
+file
+
+
+
+
+2011-11-19T16:17:59.495875Z
+75bca9b77e33abbd29b15316765fc0ab
+2011-11-19T14:26:37.189612Z
+2
+pascal
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3708
 
 workflow.png
 file
@@ -468,40 +468,6 @@ has-props
 
 3814
 
-package.png
-file
-
-
-
-
-2011-11-19T16:17:59.499875Z
-a03ed98f5616ea7f26d10a4b5146af7f
-2011-11-19T14:26:37.189612Z
-2
-pascal
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3657
-
 info.png
 file
 
@@ -535,6 +501,40 @@ has-props
 
 
 3735
+
+package.png
+file
+
+
+
+
+2011-11-19T16:17:59.499875Z
+a03ed98f5616ea7f26d10a4b5146af7f
+2011-11-19T14:26:37.189612Z
+2
+pascal
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+3657
 
 tracker.png
 file

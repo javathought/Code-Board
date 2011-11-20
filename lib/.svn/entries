@@ -1,8 +1,8 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/lib
+12
+svn://localhost/codeboard/codeboard-core/trunk/lib
 svn://localhost/codeboard
 
 

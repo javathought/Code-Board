@@ -1,17 +1,17 @@
 10
 
 dir
-3
-svn://localhost/codeboard/codeboard-core
+12
+svn://localhost/codeboard/codeboard-core/trunk
 svn://localhost/codeboard
 
 
 
-2011-11-19T21:30:17.300017Z
-3
+2011-11-20T00:41:34.680504Z
+9
 pascal
 has-props
-
+has-prop-mods
 
 
 

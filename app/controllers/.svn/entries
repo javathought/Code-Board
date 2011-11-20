@@ -1,14 +1,14 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/app/controllers
+12
+svn://localhost/codeboard/codeboard-core/trunk/app/controllers
 svn://localhost/codeboard
 
 
 
-2011-11-19T14:26:37.189612Z
-2
+2011-11-20T00:27:39.918973Z
+6
 pascal
 
 
@@ -28,7 +28,7 @@ d2ca81f5-52ed-4abc-b16b-f881ec77a0a8
 
 Users.java
 file
-4
+
 
 
 
@@ -62,7 +62,7 @@ pascal
 
 Application.java
 file
-3
+
 
 
 
@@ -100,10 +100,10 @@ file
 
 
 
-2011-11-19T16:17:59.455875Z
-906fd5684176e647eacdb6db0f7a539c
-2011-11-19T14:26:37.189612Z
-2
+2011-11-19T23:25:22.299314Z
+434a01d061a9c59a912be468f6bd3298
+2011-11-20T00:27:39.918973Z
+6
 pascal
 
 
@@ -126,7 +126,7 @@ pascal
 
 
 
-355
+335
 
 Security.java
 file

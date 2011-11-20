@@ -1,8 +1,8 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/public/themes/pixel-cookers/images/icons
+12
+svn://localhost/codeboard/codeboard-core/trunk/public/themes/pixel-cookers/images/icons
 svn://localhost/codeboard
 
 
@@ -978,40 +978,6 @@ has-props
 
 835
 
-balloons.png
-file
-
-
-
-
-2011-11-19T16:17:59.531875Z
-701da3be73186c76466a1a2fc6fb2ec6
-2011-11-19T14:26:37.189612Z
-2
-pascal
-has-props
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-701
-
 star.png
 file
 
@@ -1045,6 +1011,40 @@ has-props
 
 
 757
+
+balloons.png
+file
+
+
+
+
+2011-11-19T16:17:59.531875Z
+701da3be73186c76466a1a2fc6fb2ec6
+2011-11-19T14:26:37.189612Z
+2
+pascal
+has-props
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+701
 
 report-paper.png
 file

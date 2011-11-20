@@ -1,14 +1,14 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/app/views/Users
+12
+svn://localhost/codeboard/codeboard-core/trunk/app/views/Users
 svn://localhost/codeboard
 
 
 
-2011-11-19T14:26:37.189612Z
-2
+2011-11-19T22:50:15.731533Z
+4
 pascal
 
 
@@ -28,7 +28,7 @@ d2ca81f5-52ed-4abc-b16b-f881ec77a0a8
 
 show.html
 file
-4
+
 
 
 
@@ -62,7 +62,7 @@ pascal
 
 list.html
 file
-3
+
 
 
 

@@ -1,14 +1,14 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/app/views
+12
+svn://localhost/codeboard/codeboard-core/trunk/app/views
 svn://localhost/codeboard
 
 
 
-2011-11-19T14:26:37.189612Z
-2
+2011-11-19T22:57:04.201974Z
+5
 pascal
 
 
@@ -34,7 +34,7 @@ dir
 
 main.html
 file
-5
+
 
 
 

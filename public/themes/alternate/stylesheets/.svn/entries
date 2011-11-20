@@ -1,8 +1,8 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/public/themes/alternate/stylesheets
+12
+svn://localhost/codeboard/codeboard-core/trunk/public/themes/alternate/stylesheets
 svn://localhost/codeboard
 
 

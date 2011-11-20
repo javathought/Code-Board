@@ -1,8 +1,8 @@
 10
 
 dir
-2
-svn://localhost/codeboard/codeboard-core/public/themes/pixel-cookers/stylesheets
+12
+svn://localhost/codeboard/codeboard-core/trunk/public/themes/pixel-cookers/stylesheets
 svn://localhost/codeboard
 
 
