@@ -45,7 +45,7 @@
 		<div class="tabs">
 		  	<ul>
 		      	<li>
-		      	<a href="/admin/users/${user?.login}" class="selected" id="tab-general" onclick="showTab('general'); this.blur(); return false;">
+		      	<a href="#" class="selected" id="tab-general" onclick="showTab('general'); this.blur(); return false;">
 		      	General</a></li>
 		      	<!-- li><a href="#" id="tab-memberships" onclick="showTab('memberships'); this.blur(); return false;">Projects</a></li -->
 		    </ul>
@@ -86,7 +86,7 @@
 				<span class="errorExplanation">#{error 'hashed_password' /}</span><br />
 					<em>Must be at least 4 characters long.</em></p>
 				<p><label for="user_password_confirmation">Confirmation<span class="required"> *</span></label>
-				<input id="user_password_confirmation" name="user[password_confirmation]" size="25" type="password" /></p>
+				<input id="user_password_confirmation" name="password_confirmation" size="25" type="password" /></p>
 
 				</div>
 		    </div>
