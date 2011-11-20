@@ -3,12 +3,14 @@ package models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import play.data.validation.Email;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
 @Entity
+@Table(name="cb_user")
 public class User extends Model {
     
 	@Required
