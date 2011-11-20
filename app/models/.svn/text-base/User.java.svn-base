@@ -3,12 +3,14 @@ package models;
 import java.util.Date;
 
 import javax.persistence.Entity;
+import javax.persistence.Table;
 
 import play.data.validation.Email;
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
 @Entity
+@Table(name="cb_user")
 public class User extends Model {
     
 	@Required
@@ -21,7 +23,6 @@ public class User extends Model {
 	public Boolean admin;
 	public Date created_on;
 	public Date last_login_on;
-	@Required
 	public String hashed_password;
 	
 	public String toString() {
