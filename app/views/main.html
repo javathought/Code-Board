@@ -25,12 +25,12 @@
 			    </li></ul>		
 			</div>
 			#{if session.contains("username")}
-		    <div id="loggedas">Logged in as <a href="/admin/users/${username}">${username}</a></div>
+		    <div id="loggedas">Logged in as <a href="/me">${username}</a></div>
 		    #{/if}
 		    
 	        <ul><li><a href="/" class="home">Home</a></li>
 			#{if session.contains("username")}
-			<li><a href="/admin/users/${username}" class="my-page">My page</a></li>
+			<li><a href="/me" class="my-page">My page</a></li>
 		    #{/if}
 		
 			<!-- li><a href="/projects" class="projects">Projects</a></li -->
