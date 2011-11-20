@@ -2,7 +2,7 @@ package controllers;
 
 import play.mvc.*;
 
-@Check("admin")
+//@Check("admin")
 public class Admin extends Main {
 
 

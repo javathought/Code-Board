@@ -1,5 +1,0 @@
-User(admin):
-  login: admin
-  hashed_password: 939632E44E278ACCB51BB1D58228BD569F2EFB61
-  email: admin@codeboard.com
-  admin: true

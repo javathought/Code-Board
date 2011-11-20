@@ -371,3 +371,4 @@ Caused by: java.lang.NullPointerException: Cannot get property 'login' on null o
 00:23:41,812 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
 00:23:42,386 INFO  ~ Application 'codeboard' is now started !
 00:23:46,498 INFO  ~ Project omtf
+00:26:30,205 INFO  ~ Project OMTF

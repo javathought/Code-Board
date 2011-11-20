@@ -59,7 +59,6 @@ public class Users extends Admin {
 		if (user.created_on == null) {
 			user.created_on = Calendar.getInstance().getTime();
 		}
-		Logger.info("admin is " + isAdmin);
 		user.admin = isAdmin;
 		user.save();
 		render("@show", user);
@@ -72,19 +71,19 @@ public class Users extends Admin {
 
 	public static User connect(String username, String password) {
 		User user = User.find("byLogin", username).first();
-		if (user != null) {
-			try {
-				if (user.hashed_password.equals(hash(password))) {
-					user.last_login_on = Calendar.getInstance().getTime();
-					user.save();
-				} else {
-					user = null;
-				}
-			} catch (NoSuchAlgorithmException e) {
-				user = null;
-			}
-			
-		}
+//		if (user != null) {
+//			try {
+//				if (user.hashed_password.equals(hash(password))) {
+//					user.last_login_on = Calendar.getInstance().getTime();
+//					user.save();
+//				} else {
+//					user = null;
+//				}
+//			} catch (NoSuchAlgorithmException e) {
+//				user = null;
+//			}
+//			
+//		}
 
 		return user;
 	}
