@@ -13,8 +13,6 @@ GET     /projects/{identifier}/issues			Application.issues
 GET     /projects/{identifier}/issues/new		Application.newIssue
 GET     /issues/{id}							Application.issue
 
-
-
 # Ignore favicon requests
 GET     /favicon.ico                            404
 
