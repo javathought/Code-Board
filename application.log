@@ -924,3 +924,33 @@ play.exceptions.JPAException: Cannot start a JPA manager without a properly conf
 	at play.server.Server.main(Server.java:158)
 Caused by: java.lang.NullPointerException: No datasource configured
 	... 5 more
+16:14:18,093 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+16:14:18,095 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+16:14:18,095 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+16:14:18,096 INFO  ~ Module .svn is available (/home/pascal/workspace/codeboard-core/modules/.svn)
+16:14:18,152 INFO  ~ Precompiling ...
+16:14:22,931 WARN  ~ Cannot replace DATABASE_URL in configuration (db=${DATABASE_URL})
+16:14:23,571 ERROR ~ 
+
+@68elnk4ae
+Can't start in PROD mode with errors
+
+JPA error
+A JPA error occurred (Cannot start a JPA manager without a properly configured database): No datasource configured
+
+play.exceptions.JPAException: Cannot start a JPA manager without a properly configured database
+	at play.db.jpa.JPAPlugin.onApplicationStart(JPAPlugin.java:108)
+	at play.plugins.PluginCollection.onApplicationStart(PluginCollection.java:425)
+	at play.Play.start(Play.java:495)
+	at play.Play.init(Play.java:292)
+	at play.server.Server.main(Server.java:158)
+Caused by: java.lang.NullPointerException: No datasource configured
+	... 5 more
+16:14:31,287 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+16:14:31,290 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+16:14:31,291 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+16:14:31,291 INFO  ~ Module .svn is available (/home/pascal/workspace/codeboard-core/modules/.svn)
+16:14:31,705 WARN  ~ You're running Play! in DEV mode
+16:14:31,767 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+16:15:02,453 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+16:15:03,013 INFO  ~ Application 'codeboard' is now started !
