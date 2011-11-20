@@ -21,7 +21,6 @@ public class User extends Model {
 	public Boolean admin;
 	public Date created_on;
 	public Date last_login_on;
-	@Required
 	public String hashed_password;
 	
 	public String toString() {

@@ -45,10 +45,10 @@ public class Users extends Admin {
 			} catch (NoSuchAlgorithmException e) {
 				validation.addError("hashed_password", "Hash failed");
 			}
-//		} else {
-//			validation.addError("hashed_password", "Must not be empty");
 		}
 
+		user.admin = isAdmin;
+		
 		if (validation.hasErrors()) {
 			params.flash(); // add http parameters to the flash scope
 			// validation.keep(); // keep the errors for the next request
@@ -59,7 +59,6 @@ public class Users extends Admin {
 		if (user.created_on == null) {
 			user.created_on = Calendar.getInstance().getTime();
 		}
-		user.admin = isAdmin;
 		user.save();
 		render("@show", user);
 

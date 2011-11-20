@@ -45,7 +45,7 @@
 		<div class="tabs">
 		  	<ul>
 		      	<li>
-		      	<a href="/admin/users/${user.login}" class="selected" id="tab-general" onclick="showTab('general'); this.blur(); return false;">
+		      	<a href="/admin/users/${user?.login}" class="selected" id="tab-general" onclick="showTab('general'); this.blur(); return false;">
 		      	General</a></li>
 		      	<!-- li><a href="#" id="tab-memberships" onclick="showTab('memberships'); this.blur(); return false;">Projects</a></li -->
 		    </ul>
@@ -74,7 +74,7 @@
 				<span class="errorExplanation">#{error 'mail' /}</span></p>
 				<p><label for="user_admin">Administrator</label>
 				
-				<input type="checkbox" id="user_admin" name="isAdmin"  #{if user.admin }checked#{/if} />
+				<input type="checkbox" id="user_admin" name="isAdmin"  #{if user?.admin }checked#{/if} />
 				<span class="errorExplanation">#{error 'admin' /}</span></p>
 		    </div>
 			<div class="box tabular">
