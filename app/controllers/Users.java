@@ -12,20 +12,28 @@ import play.data.validation.Valid;
 import play.mvc.Controller;
 import play.mvc.With;
 
-public class Users extends Admin {
+@With(Secure.class)
+public class Users extends Main {
 
 	public static void create() {
 		render("@show");
 	}
 
+	@Check("admin")
 	public static void show(String login) {
 		User user = User.find("byLogin", login).first();
 		render(user);
 	}
 	
+	@Check("admin")
 	public static void list() {
 		List<User> users = User.findAll();
 		render(users);
+	}
+	
+	public static void showMe() {
+		User user = User.find("byLogin", Security.connected()).first();
+		render("@show",user);
 	}
 	
 	private static String hash(String password) throws NoSuchAlgorithmException {
@@ -70,19 +78,19 @@ public class Users extends Admin {
 
 	public static User connect(String username, String password) {
 		User user = User.find("byLogin", username).first();
-//		if (user != null) {
-//			try {
-//				if (user.hashed_password.equals(hash(password))) {
-//					user.last_login_on = Calendar.getInstance().getTime();
-//					user.save();
-//				} else {
-//					user = null;
-//				}
-//			} catch (NoSuchAlgorithmException e) {
-//				user = null;
-//			}
-//			
-//		}
+		if (user != null) {
+			try {
+				if (user.hashed_password.equals(hash(password))) {
+					user.last_login_on = Calendar.getInstance().getTime();
+					user.save();
+				} else {
+					user = null;
+				}
+			} catch (NoSuchAlgorithmException e) {
+				user = null;
+			}
+			
+		}
 
 		return user;
 	}
