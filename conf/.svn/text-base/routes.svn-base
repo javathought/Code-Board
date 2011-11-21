@@ -8,12 +8,11 @@ GET     /admin                                  module:crud
 GET     /admin/users							Users.list
 GET     /admin/users/new						Users.create
 GET     /admin/users/{login}					Users.show
+GET 	/me										Users.showMe
 GET     /projects/{identifier}					Application.project
 GET     /projects/{identifier}/issues			Application.issues
 GET     /projects/{identifier}/issues/new		Application.newIssue
 GET     /issues/{id}							Application.issue
-
-
 
 # Ignore favicon requests
 GET     /favicon.ico                            404

@@ -20,7 +20,7 @@
 	<div id="content">    
 
 		#{if user?.id}
-		<h2>#{secure.check 'admin'}<a href="/admin/users">#{/secure.check }Users#{secure.check 'admin'}</a>#{/secure.check } » ${user.login}</h2>
+		<h2><a href="/admin/users">Users</a> » ${user.login}</h2>
 		#{/if}
 		#{else}
 		<h2>New User</h2>
@@ -72,10 +72,11 @@
 				<p><label for="user_mail">Email<span class="required"> *</span></label>
 				<input id="user_mail" name="user.mail" size="30" type="text" value="${user?.mail}" />
 				<span class="errorExplanation">#{error 'mail' /}</span></p>
+				#{secure.check 'admin'}
 				<p><label for="user_admin">Administrator</label>
-				
 				<input type="checkbox" id="user_admin" name="isAdmin"  #{if user?.admin }checked#{/if} />
 				<span class="errorExplanation">#{error 'admin' /}</span></p>
+				#{/secure.check }
 		    </div>
 			<div class="box tabular">
 		    	<h3>Authentication</h3>

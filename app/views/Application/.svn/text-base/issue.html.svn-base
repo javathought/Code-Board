@@ -52,7 +52,7 @@
 
 					<p class="field">
 					<fieldset><legend>Description</legend>
-					    <textarea type="text" name="issue.desription" id="description" cols="130" rows="10">${issue?.description}</textarea>
+					    <textarea type="text" name="issue.description" id="description" cols="80" rows="10">${issue?.description}</textarea>
 					</fieldset>
 					    <!-- span class="error">${errors.forKey('issue.description')}</span -->
 					</p>

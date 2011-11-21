@@ -25,7 +25,7 @@ public class Users extends Main {
 		render(user);
 	}
 	
-	@Check("admin")
+//	@Check("admin")
 	public static void list() {
 		List<User> users = User.findAll();
 		render(users);
@@ -68,7 +68,7 @@ public class Users extends Main {
 			user.created_on = Calendar.getInstance().getTime();
 		}
 		user.save();
-		render("@show", user);
+		list();
 
 	}
 

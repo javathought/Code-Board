@@ -39,7 +39,7 @@
 			
 					#{list items:users, as:'user'}
 						<tr id="user-${user.id}" class="hascontextmenu">
-							<td class="login"><a href="/admin/users/${user.login}">${user.login}</a></td>
+							<td class="login">#{secure.check 'admin'}<a href="/admin/users/${user.login}">#{/secure.check }${user.login}#{secure.check 'admin'}</a>#{/secure.check }</td>
 					        <td class="firstname">${user.firstname}</td>
 					        <td class="lastname">${user.lastname}</td>
 					        <td class="email"><a href="mailto:${user.mail}">${user.mail}</a></td>
