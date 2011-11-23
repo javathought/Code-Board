@@ -54,7 +54,7 @@ public class Application extends Main {
 		while (trackerCursor.hasNext()) {
 			tracker = (Tracker) trackerCursor.next();
 			long i = Issue.count("tracker = ? and project = ?", tracker, project);
-			long j = Issue.count("tracker = ? and project = ? and state.closed = ? ", tracker, project, false);
+			long j = Issue.count("tracker = ? and project = ? and state.closed = 0 ", tracker, project);
 			summary.put(tracker.id, i);
 			opened.put(tracker.id, j);
 		}

@@ -2842,3 +2842,52 @@ play.exceptions.CompilationException: Syntax error on token "?", delete this tok
 	at play.Play.detectChanges(Play.java:595)
 	at play.Invoker$Invocation.init(Invoker.java:186)
 	at Invocation.HTTP Request(Play!)
+19:04:22,845 ERROR ~ Unknown column 'fullname' in 'where clause'
+19:04:22,908 ERROR ~ 
+
+@68fid2g4m
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/controllers/Application.java around line 30)
+JPAQueryException occured : Error while executing query from models.User where fullname = ?: Unknown column 'fullname' in 'where clause'
+
+play.exceptions.JavaExecutionException: Error while executing query <strong>from models.User where fullname = ?</strong>: Unknown column 'fullname' in 'where clause'
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:229)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.db.jpa.JPABase$JPAQueryException: Error while executing query <strong>from models.User where fullname = ?</strong>: Unknown column 'fullname' in 'where clause'
+	at play.db.jpa.GenericModel$JPAQuery.first(GenericModel.java:324)
+	at controllers.Application.setConnectedUser(Application.java:30)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:320)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:140)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'fullname' in 'where clause'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2626)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2111)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2273)
+	at org.hibernate.jdbc.AbstractBatcher.getResultSet(AbstractBatcher.java:208)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:1953)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:802)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274)
+	at org.hibernate.loader.Loader.doList(Loader.java:2533)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2276)
+	at org.hibernate.loader.Loader.list(Loader.java:2271)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:452)
+	at org.hibernate.hql.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:363)
+	at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:196)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1268)
+	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
+	at org.hibernate.ejb.QueryImpl.getResultList(QueryImpl.java:246)
+	at play.db.jpa.GenericModel$JPAQuery.first(GenericModel.java:318)
+	... 7 more
+19:07:56,334 INFO  ~ assignee = null
+19:07:56,513 INFO  ~ Project omtf

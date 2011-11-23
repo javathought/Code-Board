@@ -54,7 +54,7 @@ public class Application extends Main {
 		while (trackerCursor.hasNext()) {
 			tracker = (Tracker) trackerCursor.next();
 			long i = Issue.count("tracker = ? and project = ?", tracker, project);
-			long j = Issue.count("tracker = ? and project = ? and state.closed = ? ", tracker, project, false);
+			long j = Issue.count("tracker = ? and project = ? and state.closed = 0 ", tracker, project);
 			summary.put(tracker.id, i);
 			opened.put(tracker.id, j);
 		}
@@ -76,8 +76,7 @@ public class Application extends Main {
 		Project project = Project.find("identifier", identifier).first();
 		List<User> users = User.find("order by login").fetch();
 		List<State> states = State.find("order by position").fetch();
-
-    	render("@issue", trackers, project, users, states);
+    	render("@issue", trackers, project, users);
     }
     
     public static void saveIssue(Long projectId, Long trackerId, Long assigneeId, Long stateId, @Valid Issue issue) {
