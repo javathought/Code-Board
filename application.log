@@ -2787,3 +2787,58 @@ Caused by: org.hibernate.hql.ast.QuerySyntaxException: unexpected token: ? near 
 01:02:11,155 INFO  ~ Project omtfcore
 01:02:15,933 INFO  ~ assignee = null
 01:02:16,041 INFO  ~ Project omtfcore
+01:20:16,955 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+01:20:16,958 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+01:20:16,959 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+01:20:17,401 WARN  ~ You're running Play! in DEV mode
+01:20:17,465 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+01:20:22,347 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+01:20:22,979 INFO  ~ Application 'codeboard' is now started !
+01:28:45,930 INFO  ~ Project omtfcore
+01:28:47,741 INFO  ~ Project omtfcore
+01:28:49,096 INFO  ~ Project omtfcore
+01:28:50,524 INFO  ~ Project omtfcore
+18:47:27,840 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+18:47:27,868 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+18:47:27,869 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+18:47:28,428 WARN  ~ You're running Play! in DEV mode
+18:47:28,495 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+18:47:36,066 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+18:47:36,840 INFO  ~ Application 'codeboard' is now started !
+18:47:37,294 ERROR ~ 
+
+@68fid2g4i
+Internal Server Error (500) for request GET /
+
+Execution exception (In /app/controllers/Application.java around line 30)
+NullPointerException occured : Try to read login on null object models.User (controllers.Application.setConnectedUser, line 30)
+
+play.exceptions.JavaExecutionException: Try to read login on null object models.User (controllers.Application.setConnectedUser, line 30)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:229)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Try to read login on null object models.User (controllers.Application.setConnectedUser, line 30)
+	at play.classloading.enhancers.PropertiesEnhancer$FieldAccessor.invokeReadProperty(PropertiesEnhancer.java:202)
+	at controllers.Application.setConnectedUser(Application.java:30)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.handleBefores(ActionInvoker.java:320)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:140)
+	... 1 more
+18:53:49,343 ERROR ~ 
+
+@68fid2g4j
+Internal Server Error (500) for request GET /
+
+Compilation error (In /app/controllers/Application.java around line 30)
+The file /app/controllers/Application.java could not be compiled. Error raised is : Syntax error on token "?", delete this token
+
+play.exceptions.CompilationException: Syntax error on token "?", delete this token
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:474)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
