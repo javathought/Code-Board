@@ -1,0 +1,65 @@
+#{extends 'main.html' /}
+#{set title:'Users'/}
+#{set issuesSelected:'selected' /}
+
+
+<div id="header">
+	<h1>#{get 'title' /}</h1>
+	<div id="main-menu">
+	</div>
+	
+</div>
+
+
+<div class="nosidebar" id="main">
+
+    <div id="sidebar">        
+            <h3>My datas</h3>
+    </div>
+    
+	<div id="content">    
+
+		<h2>Users</h2>
+
+
+			<div class="autoscroll" >
+				<table class="list users">
+			    <thead><tr>
+					<th title="Sort by &quot;#&quot;">Login</th>
+		          <th title="Sort by &quot;Firstname&quot;">Firstname</th>
+		          <th title="Sort by &quot;Lastname&quot;">Lastname</th>
+		          <th title="Sort by &quot;Email&quot;">Email</th>
+		          <th title="Sort by &quot;Administrator&quot;">Administrator</th>
+		          <th title="Sort by &quot;Created&quot;">Created</th>
+		          <th title="Sort by &quot;Last Connection&quot;">Last Connection</th>
+			        
+				</tr>
+				</thead>
+				<tbody>
+			
+					#{list items:users, as:'user'}
+						<tr id="user-${user.id}" class="hascontextmenu">
+							<td class="login">#{secure.check 'admin'}<a href="/admin/users/${user.login}">#{/secure.check }${user.login}#{secure.check 'admin'}</a>#{/secure.check }</td>
+					        <td class="firstname">${user.firstname}</td>
+					        <td class="lastname">${user.lastname}</td>
+					        <td class="email"><a href="mailto:${user.mail}">${user.mail}</a></td>
+					        <td class="checkbox hide-when-print" align="center">
+					        #{if user.admin }
+					        <img alt="Toggle_check" src="@{'/public/images/toggle_check.png'}" />
+					        #{/if}
+					        </td>
+					        <td class="created_on" align="center">${user.created_on?.format('dd/MM/yy hh:mm a')}</td>
+					        <td class="last_login_on" align="center">${user.last_login_on?.format('dd/MM/yy hh:mm a')}</td>
+
+						</tr>
+					#{/list}
+				</tbody>
+				</table>
+			</div>
+			</form>
+   		 	
+   		 	
+		<!-- div style="clear:both;"></div -->
+	</div>
+</div>
+

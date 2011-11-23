@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <title>#{get 'title' /}</title>
+        <meta charset="${_response_encoding}">
+        <link rel="stylesheet" media="screen" href="@{'/public/themes/pixel-cookers/stylesheets/application.css'}">
+        #{get 'moreStyles' /}
+        <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
+        <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
+
+    </head>
+    <body>
+    <div id="wrapper">
+	<div ud="wrapper2">
+		<div id="top-menu">
+			<div id="account">
+				<ul><li>
+				#{if session.contains("username")}
+			       <a href="@{Secure.logout()}">Logout</a>
+			    #{/if}
+			    #{else}
+			      <a href="@{Secure.login()}">Login</a>
+			    #{/else}
+			    </li></ul>		
+			</div>
+			#{if session.contains("username")}
+		    <div id="loggedas">Logged in as <a href="/me">${username}</a></div>
+		    #{/if}
+		    
+	        <ul><li><a href="/" class="home">Home</a></li>
+			#{if session.contains("username")}
+			<li><a href="/me" class="my-page">My page</a></li>
+		    #{/if}
+		
+			<!-- li><a href="/projects" class="projects">Projects</a></li -->
+			#{secure.check 'admin'}
+			<li><a href="/admin" class="administration">Administration</a></li>
+		    #{/secure.check}
+			    
+     	</div>
+		
+        #{doLayout /}        
+		
+		<div style="clear:both;"> </div>
+
+		<div id="footer">
+			<div class="bgl"><div class="bgr">Powered by Code Board &copy; 2001 <a href="http://javathought.wordpress.com">Javathought</a>
+			</div></div>
+		</div>
+	</div>
+	</div>
+    </body>
+</html>
