@@ -19,7 +19,7 @@
     
 	<div id="content">    
 
-		<h2>&{'overview'}</h2>
+		<h2>Overview</h2>
 
 		<div class="splitcontentleft">
 		  	<div class="wiki">
@@ -28,14 +28,14 @@
 			</div>	
   
 		    <div class="issues box">    
-			    <h3>&{'overview_issue_tracking'}</h3>			    
+			    <h3>Issue tracking</h3>			    
 			    <ul>
 			    #{list items:trackers, as:'tracker'}
 			          <li><!-- a href="/issues?set_filter=1&amp;tracker_id=2" -->${tracker.name}<!-- /a -->: ${opened.get(tracker.id)} open / ${summary.get(tracker.id)}</li>
 				#{/list}
 			    </ul>
 		       <p>
-		    	<a href="/projects/${project.identifier}/issues">&{'view_all_issues'}</a>
+		    	<a href="/projects/${project.identifier}/issues">View all issues</a>
 				</p>
 		    </div>
     
