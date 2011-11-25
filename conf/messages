@@ -57,6 +57,8 @@ state = Status
 assignee = Assignee
 priority = Priority
 updated = Updated
+project = Project
+issues_affected = 
 
 create = Create
 

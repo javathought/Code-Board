@@ -3254,3 +3254,250 @@ play.exceptions.TemplateCompilationException: unexpected token: title
 22:58:00,471 INFO  ~ Project omtf
 22:58:05,501 INFO  ~ Project omtf
 22:59:58,368 WARN  ~ Messages file missing for locale en
+23:11:39,987 INFO  ~ Project omtf
+23:44:45,811 INFO  ~ Project omtf
+00:16:17,320 INFO  ~ Project omtf
+23:00:03,849 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:00:03,908 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:00:03,908 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:00:04,421 WARN  ~ You're running Play! in DEV mode
+23:00:04,488 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:00:09,922 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:00:10,507 WARN  ~ Messages file missing for locale en
+23:00:10,509 INFO  ~ Application 'codeboard' is now started !
+23:11:59,851 WARN  ~ Messages file missing for locale en
+23:12:09,785 ERROR ~ Unknown column 'assigne' in 'where clause'
+23:12:09,920 ERROR ~ 
+
+@68g88aaak
+Internal Server Error (500) for request GET /me/issues
+
+Execution exception (In /app/controllers/Application.java around line 74)
+JPAQueryException occured : Error while executing query from models.Issue where assigne = ?: Unknown column 'assigne' in 'where clause'
+
+play.exceptions.JavaExecutionException: Error while executing query <strong>from models.Issue where assigne = ?</strong>: Unknown column 'assigne' in 'where clause'
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:229)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.db.jpa.JPABase$JPAQueryException: Error while executing query <strong>from models.Issue where assigne = ?</strong>: Unknown column 'assigne' in 'where clause'
+	at play.db.jpa.GenericModel$JPAQuery.fetch(GenericModel.java:350)
+	at controllers.Application.myIssues(Application.java:74)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	... 1 more
+Caused by: com.mysql.jdbc.exceptions.jdbc4.MySQLSyntaxErrorException: Unknown column 'assigne' in 'where clause'
+	at com.mysql.jdbc.Util.handleNewInstance(Util.java:407)
+	at com.mysql.jdbc.Util.getInstance(Util.java:382)
+	at com.mysql.jdbc.SQLError.createSQLException(SQLError.java:1052)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3593)
+	at com.mysql.jdbc.MysqlIO.checkErrorPacket(MysqlIO.java:3525)
+	at com.mysql.jdbc.MysqlIO.sendCommand(MysqlIO.java:1986)
+	at com.mysql.jdbc.MysqlIO.sqlQueryDirect(MysqlIO.java:2140)
+	at com.mysql.jdbc.ConnectionImpl.execSQL(ConnectionImpl.java:2626)
+	at com.mysql.jdbc.PreparedStatement.executeInternal(PreparedStatement.java:2111)
+	at com.mysql.jdbc.PreparedStatement.executeQuery(PreparedStatement.java:2273)
+	at org.hibernate.jdbc.AbstractBatcher.getResultSet(AbstractBatcher.java:208)
+	at org.hibernate.loader.Loader.getResultSet(Loader.java:1953)
+	at org.hibernate.loader.Loader.doQuery(Loader.java:802)
+	at org.hibernate.loader.Loader.doQueryAndInitializeNonLazyCollections(Loader.java:274)
+	at org.hibernate.loader.Loader.doList(Loader.java:2533)
+	at org.hibernate.loader.Loader.listIgnoreQueryCache(Loader.java:2276)
+	at org.hibernate.loader.Loader.list(Loader.java:2271)
+	at org.hibernate.loader.hql.QueryLoader.list(QueryLoader.java:452)
+	at org.hibernate.hql.ast.QueryTranslatorImpl.list(QueryTranslatorImpl.java:363)
+	at org.hibernate.engine.query.HQLQueryPlan.performList(HQLQueryPlan.java:196)
+	at org.hibernate.impl.SessionImpl.list(SessionImpl.java:1268)
+	at org.hibernate.impl.QueryImpl.list(QueryImpl.java:102)
+	at org.hibernate.ejb.QueryImpl.getResultList(QueryImpl.java:246)
+	at play.db.jpa.GenericModel$JPAQuery.fetch(GenericModel.java:348)
+	... 7 more
+23:13:08,384 ERROR ~ 
+
+@68g88aaan
+Internal Server Error (500) for request GET /me/issues
+
+Execution exception (In /app/controllers/Application.java around line 74)
+IllegalArgumentException occured : Parameter value [pascal] was not matching type [models.User]
+
+play.exceptions.JavaExecutionException: Parameter value [pascal] was not matching type [models.User]
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:229)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalArgumentException: Parameter value [pascal] was not matching type [models.User]
+	at org.hibernate.ejb.AbstractQueryImpl.registerParameterBinding(AbstractQueryImpl.java:360)
+	at org.hibernate.ejb.QueryImpl.setParameter(QueryImpl.java:435)
+	at org.hibernate.ejb.QueryImpl.setParameter(QueryImpl.java:72)
+	at play.db.jpa.JPQL.bindParameters(JPQL.java:169)
+	at play.db.jpa.JPQL.find(JPQL.java:46)
+	at models.Issue.find(Issue.java)
+	at controllers.Application.myIssues(Application.java:74)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	... 1 more
+23:15:06,064 ERROR ~ 
+
+@68g88aaap
+Internal Server Error (500) for request GET /me/issues
+
+Template not found (In /app/controllers/Application.java around line 75)
+The template Application/myIssues.html does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : Application/myIssues.html
+	at play.mvc.Controller.renderTemplate(Controller.java:666)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.myIssues(Application.java:75)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+23:15:22,462 ERROR ~ 
+
+@68g88aab0
+Internal Server Error (500) for request GET /me/issues
+
+Template execution error (In /app/views/tags/main-menu.html around line 2)
+Execution error occured in template /app/views/tags/main-menu.html. Exception raised was NullPointerException : Cannot get property 'identifier' on null object.
+
+play.exceptions.TemplateExecutionException: Cannot get property 'identifier' on null object
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.myIssues(Application.java:75)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException: Cannot get property 'identifier' on null object
+	at {play}/framework/templates/tags/500.html.(line:1)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	... 15 more
+23:17:58,176 INFO  ~ assignee = null
+23:22:13,108 ERROR ~ 
+
+@68g88aac5
+Internal Server Error (500) for request GET /me/issues
+
+Template compilation error (In /app/views/Application/issues.html around line 48)
+The template /app/views/Application/issues.html does not compile : #{if} is not closed.
+
+play.exceptions.TemplateCompilationException: #{if} is not closed.
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:102)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.mvc.Controller.renderTemplate(Controller.java:658)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.myIssues(Application.java:75)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+23:22:43,513 WARN  ~ Messages file missing for locale en
+23:22:59,741 WARN  ~ Messages file missing for locale en
+23:25:25,495 WARN  ~ Messages file missing for locale en
+23:44:36,524 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:44:36,527 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:44:36,527 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:44:36,970 WARN  ~ You're running Play! in DEV mode
+23:44:37,038 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:44:41,338 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:44:42,053 WARN  ~ Messages file missing for locale en
+23:44:42,054 INFO  ~ Application 'codeboard' is now started !
+23:47:09,859 WARN  ~ Messages file missing for locale en
+23:48:00,197 ERROR ~ 
+
+@68g8e6a1e
+Internal Server Error (500) for request GET /projects/omtf/issues
+
+Template compilation error (In /app/views/Application/issues.html around line 65)
+The template /app/views/Application/issues.html does not compile : #{list} is not closed.
+
+play.exceptions.TemplateCompilationException: #{list} is not closed.
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:102)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:82)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.mvc.Controller.renderTemplate(Controller.java:658)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issues(Application.java:70)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+23:48:28,173 ERROR ~ 
+
+@68g8e6a1f
+Internal Server Error (500) for request GET /projects/omtf/issues
+
+Template execution error (In /app/views/Application/issues.html around line 73)
+Execution error occured in template /app/views/Application/issues.html. Exception raised was MissingPropertyException : No such property: priority for class: models.Issue.
+
+play.exceptions.TemplateExecutionException: No such property: priority for class: models.Issue
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issues(Application.java:70)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingPropertyException: No such property: priority for class: models.Issue
+	at /app/views/Application/issues.html.(line:73)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	... 13 more
+23:49:15,487 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:49:15,490 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:49:15,491 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:49:15,940 WARN  ~ You're running Play! in DEV mode
+23:49:16,023 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:49:19,416 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:49:20,443 WARN  ~ Messages file missing for locale en
+23:49:20,444 INFO  ~ Application 'codeboard' is now started !
+23:56:44,439 WARN  ~ Messages file missing for locale en
+23:56:55,238 INFO  ~ assignee = Pascal Abaziou
+23:57:09,300 INFO  ~ assignee = Pascal Abaziou
+23:58:07,066 INFO  ~ assignee = Pascal Abaziou
+23:58:13,129 INFO  ~ assignee = Pascal Abaziou
+23:58:22,222 INFO  ~ assignee = Pascal Abaziou
+23:58:29,225 INFO  ~ assignee = null
+23:58:34,566 INFO  ~ assignee = null
+23:58:39,706 INFO  ~ assignee = null
+00:01:12,887 INFO  ~ assignee = null
+00:01:19,215 INFO  ~ assignee = null
+00:01:25,556 INFO  ~ assignee = null
+00:01:28,046 INFO  ~ assignee = null
+00:01:30,075 INFO  ~ assignee = null
+00:01:32,121 INFO  ~ assignee = null

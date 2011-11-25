@@ -58,6 +58,8 @@ state = Statut
 assignee = Assigné à
 priority = Priorité
 updated = Mis-à-jour
+project = Projet
+issues_affected = Demandes qui me sont assignées
 
 activity = Activité
 calendar = Calendrier

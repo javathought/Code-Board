@@ -9,6 +9,7 @@ GET     /admin/users							Users.list
 GET     /admin/users/new						Users.create
 GET     /admin/users/{login}					Users.show
 GET 	/me										Users.showMe
+GET 	/me/issues								Application.myIssues
 GET     /projects/{identifier}					Application.project
 GET     /projects/{identifier}/issues			Application.issues
 GET     /projects/{identifier}/issues/			Application.issues
