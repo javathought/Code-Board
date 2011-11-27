@@ -66,11 +66,11 @@
 				<p><label for="user_mail">&{'mail'}<span class="required"> *</span></label>
 				<input id="user_mail" name="user.mail" size="30" type="text" value="${user?.mail}" />
 				<span class="errorExplanation">#{error 'mail' /}</span></p>
-				#{secure.check 'admin'}
+				
 				<p><label for="user_admin">&{'admin'}</label>
 				<input type="checkbox" id="user_admin" name="isAdmin"  #{if user?.admin }checked#{/if} />
 				<span class="errorExplanation">#{error 'admin' /}</span></p>
-				#{/secure.check }
+				
 		    </div>
 			<div class="box tabular">
 		    	<h3>&{'authentification'}</h3>
