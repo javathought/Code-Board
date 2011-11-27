@@ -20,7 +20,7 @@ public class Users extends Main {
 		render("@show");
 	}
 
-	@Check("admin")
+//	@Check("admin")
 	public static void show(String login) {
 		if (login.equals("root") && ! Security.connected().equals("root")) {
 			list();
