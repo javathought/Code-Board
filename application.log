@@ -97,3 +97,13 @@ Caused by: java.lang.NullPointerException: Cannot get property 'login' on null o
 23:40:52,255 WARN  ~ Messages file missing for locale en
 23:40:52,258 INFO  ~ Application 'codeboard' is now started !
 23:45:12,255 WARN  ~ Messages file missing for locale en
+00:01:19,651 INFO  ~ directory : innerboard
+00:01:19,652 INFO  ~ directory : pixel-cookers
+00:01:19,652 INFO  ~ directory : classic
+00:01:19,652 INFO  ~ directory : alternate
+00:01:19,652 INFO  ~ directory : default
+00:01:22,244 INFO  ~ directory : innerboard
+00:01:22,244 INFO  ~ directory : pixel-cookers
+00:01:22,244 INFO  ~ directory : classic
+00:01:22,245 INFO  ~ directory : alternate
+00:01:22,245 INFO  ~ directory : default
