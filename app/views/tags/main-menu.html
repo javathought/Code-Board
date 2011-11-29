@@ -1,0 +1,14 @@
+		<ul>
+			<li><a href="/projects/${_project.identifier}" class="overview #{get 'overviewSelected' /} ">&{'overview'}</a></li>
+			<!-- li><a href="/projects/${_project.identifier}/activity" class="activity">&{'activity'}</a></li -->
+			<li><a href="/projects/${_project.identifier}/issues" class="issues #{get 'issuesSelected' /}">&{'issues'}</a></li>
+			#{if session.contains("username")}
+			<li><a href="/projects/${_project.identifier}/issues/new" class="issues #{get 'newIssueSelected' /}">&{'new_issue'}</a></li>
+			#{/if}
+			<!-- li><a href="/projects/${_project.identifier}/issues/gantt" class="gantt">Gantt</a></li>
+			<li><a href="/projects/${_project.identifier}/issues/calendar" class="calendar">&{'calendar'}</a></li>
+			<li><a href="/projects/${_project.identifier}/news" class="news">&{'news'}</a></li>
+			<li><a href="/projects/${_project.identifier}/documents" class="documents">&{'documents'}</a></li>
+			<li><a href="/projects/${_project.identifier}/wiki" class="wiki">&{'wiki'}</a></li>
+			<li><a href="/cedicam/${_project.identifier}/playforge/files" class="files">&{'files'}</a></li -->
+		</ul>

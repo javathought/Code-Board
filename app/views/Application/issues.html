@@ -1,0 +1,87 @@
+#{extends 'main.html' /}
+#{set 'title'}${project?.name} » &{'issues'}#{/set}
+#{set issuesSelected:'selected' /}
+
+
+<div id="header">
+    <!-- div id="quick-search">
+        <form action="/cedicam/search/index/sandbox" method="get">
+
+        <input name="issues" type="hidden" value="1" />
+        <a href="/cedicam/search/index/sandbox" accesskey="4">Search</a>:
+        <input accesskey="f" class="small" id="q" name="q" size="20" type="text" />
+        </form>
+        <select onchange="if (this.value != '') { window.location = this.value; }"><option value=''>Jump to a project...</option><option value="" disabled="disabled">---</option><option selected="selected" value="/cedicam/projects/sandbox?jump=issues">Sandbox</option><option value="/cedicam/projects/pfe?jump=issues">PFE-AT</option></select>
+    </div -->
+    
+	<h1>${project?.name}</h1>
+	<div id="main-menu">
+	#{if project?.id}
+		#{main-menu project:project /}
+	#{/if}
+	</div>
+	
+</div>
+
+
+<div class="nosidebar" id="main">
+
+    <div id="sidebar">        
+            <h3>&{'issues'}</h3>
+			<!-- a href="/cedicam/projects/sandbox/issues?set_filter=1">View all issues</a><br />		
+			<a href="/cedicam/projects/sandbox/issues/report">Summary</a><br />
+			<a href="/cedicam/projects/sandbox/issues/calendar">Calendar</a><br />
+			<a href="/cedicam/projects/sandbox/issues/gantt">Gantt</a><br / -->
+    </div>
+    
+	<div id="content">    
+
+		#{if ! project?.id}
+		<h2>&{'issues_affected'}</h2>		
+		#{/if}
+		#{else}
+		<h2>&{'issues'}</h2>		
+		#{/else}
+
+			<div class="autoscroll" >
+				<table class="list issues">
+			    <thead><tr>
+
+					<th title="Sort by &quot;#&quot;">#</th>
+							#{if ! project?.id}
+		          <th title="Sort by &quot;Project&quot;">&{'project'}</th>
+							#{/if}
+		          <th title="Sort by &quot;Tracker&quot;">&{'tracker'}</th>
+		          <th title="Sort by &quot;Status&quot;">&{'state'}</th>
+		          <th title="Sort by &quot;Priority&quot;">&{'priority'}</th>
+		          <th title="Sort by &quot;Subject&quot;">&{'subject'}</th>
+		          <th title="Sort by &quot;Assignee&quot;">&{'assignee'}</th>
+		          <th title="Sort by &quot;Updated&quot;">&{'updated'}</th>
+			        
+				</tr>
+				</thead>
+				<tbody>
+			
+					#{list items:issues, as:'issue'}
+						<tr id="issue-${issue.id}" class="odd ${issue_parity} priority-${issue.priority?.position}" >
+						  <!-- td class="checkbox hide-when-print"><input name="ids[]" type="checkbox" value="${issue.id}" /></td -->
+							<td class="id"><a href="/issues/${issue.id}">${issue.id}</a></td>
+							#{if ! project?.id}
+					        <td class="project"><a href="/projects/${issue.project.identifier}">${issue.project.name}</a></td>							
+							#{/if}
+					        <td class="tracker">${issue.tracker.name}</td><td class="status">${issue.state?.name}</td>
+					        <td class="priority">${issue.priority?.name}</td><td class="subject">
+					        <a href="/issues/${issue.id}">${issue.subject}</a></td>
+					        <td class="assigned_to">${issue.assignee?.firstname} ${issue.assignee?.lastname}</td>
+					        <td class="updated_on" align="center">${issue.updated?.format('dd/MM/yy hh:mm a')}</td>
+						</tr>
+					#{/list}
+				</tbody>
+				</table>
+			</div>
+   		 	
+   		 	
+		<!-- div style="clear:both;"></div -->
+	</div>
+</div>
+
