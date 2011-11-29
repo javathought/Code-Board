@@ -127,10 +127,10 @@ wikiToolbar.draw();
 					</p>
 					<p><label for="issue_priority">&{'priority'}<span class="required"> *</span></label>
 					#{if issue?.priority?.id}
-					#{select 'priorityId', items:priorities, valueProperty:'name', labelProperty:'name', id:'priority', value:"${issue?.priority?.name}" /}
+					#{select 'priorityId', items:priorities, valueProperty:'id', labelProperty:'name', id:'priority', value:"${issue?.priority?.id}" /}
 					#{/if}
 					#{else}
-					#{select 'priorityId', items:priorities, valueProperty:'name', labelProperty:'name', id:'priority', value:'Normal' /}
+					#{select 'priorityId', items:priorities, valueProperty:'id', labelProperty:'name', id:'priority', value:"2" /}
 					#{/else}
 					</p>
 	

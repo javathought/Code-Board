@@ -87,7 +87,7 @@ public class Application extends Main {
     	render("@issue", trackers, project, users, states, priorities);
     }
     
-    public static void saveIssue(Long projectId, Long trackerId, Long assigneeId, Long stateId, String priorityId, @Valid Issue issue) {
+    public static void saveIssue(Long projectId, Long trackerId, Long assigneeId, Long stateId, Long priorityId, @Valid Issue issue) {
         Project project = Project.findById(projectId);
     	List<Tracker> trackers = Tracker.find("order by position asc").fetch();
         if (Validation.hasErrors()) {
@@ -98,7 +98,7 @@ public class Application extends Main {
         issue.project = project;
         issue.tracker = tracker;
         issue.state = State.findById(stateId);
-    	issue.priority = Enumeration.find("byName", priorityId).first();
+    	issue.priority = Enumeration.findById(priorityId);
         if (assigneeId == null) {
         	issue.assignee = null;
         } else {
