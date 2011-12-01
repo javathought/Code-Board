@@ -7,4 +7,5 @@ test-result/
 lib/
 tmp/
 modules/
+.snv/
 
