@@ -1,6 +1,16 @@
 # You can specialize this file for each language.
 # For example, for French create a messages.fr file
 #
+
+# For use in JavaExtensions.since tag
+since.seconds = il y a %s seconde%s 
+since.minutes = il y a %s minute%s 
+since.hours   = il y a %s heure%s 
+since.days    = il y a %s jour%s 
+since.months  = il y a %s mois%s 
+since.years   = il y a %s année%s 
+since.format  = d MMM yyyy
+
 application.title = Code Board
 parent = Sunproject of
 isPublic = Public
@@ -53,6 +63,7 @@ issues = Demandes
 new_issue = Nouvelle demande
 tracker = Tracker
 subject = Sujet
+issue.subject = Sujet
 description = Description
 state = Statut
 assignee = Assigné à
@@ -76,6 +87,6 @@ settings = Configuration
 connect = Connexion
 
 #Validation message
-validation.required=%s is required
-
+validation.required=%s est obligatoire
+validation.object = Merci de corriger les erreur ci-dessus ;)
 

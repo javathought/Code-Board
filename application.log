@@ -103,3 +103,234 @@ play.exceptions.TemplateNotFoundException: Template not found : tags/theme.html 
 19:45:43,937 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
 19:45:44,546 WARN  ~ Messages file missing for locale en
 19:45:44,547 INFO  ~ Application 'codeboard' is now started !
+21:04:38,856 INFO  ~ assignee = null
+21:32:11,284 WARN  ~ Messages file missing for locale en
+21:32:47,056 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+21:32:47,059 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+21:32:47,060 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+21:32:47,525 WARN  ~ You're running Play! in DEV mode
+21:32:47,596 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+21:32:53,091 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+21:32:53,724 WARN  ~ Messages file missing for locale en
+21:32:53,725 INFO  ~ Application 'codeboard' is now started !
+21:32:54,005 INFO  ~ assignee = null
+21:32:54,154 ERROR ~ 
+
+@68i6kb02b
+Internal Server Error (500) for request POST /application/saveissue?projectId=2
+
+Execution exception (In /app/controllers/Application.java around line 100)
+IllegalArgumentException occured : id to load is required for loading
+
+play.exceptions.JavaExecutionException: id to load is required for loading
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:229)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.IllegalArgumentException: id to load is required for loading
+	at org.hibernate.event.LoadEvent.<init>(LoadEvent.java:89)
+	at org.hibernate.event.LoadEvent.<init>(LoadEvent.java:61)
+	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:1002)
+	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:998)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:614)
+	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:589)
+	at play.db.jpa.JPQL.findById(JPQL.java:34)
+	at models.State.findById(State.java)
+	at controllers.Application.saveIssue(Application.java:100)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	... 1 more
+21:33:19,322 INFO  ~ assignee = null
+21:33:33,684 WARN  ~ Messages file missing for locale en
+21:39:49,280 ERROR ~ 
+
+@68i6kb05o
+Internal Server Error (500) for request POST /application/saveissue?projectId=2
+
+Template compilation error (In /app/views/Application/issue.html around line 101)
+The template /app/views/Application/issue.html does not compile : #{if} is not closed.
+
+play.exceptions.TemplateCompilationException: #{if} is not closed.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:316)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:91)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.mvc.Controller.renderTemplate(Controller.java:658)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.saveIssue(Application.java:94)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+21:44:33,319 WARN  ~ Messages file missing for locale en
+22:05:34,836 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:05:34,839 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+22:05:34,840 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+22:05:35,300 WARN  ~ You're running Play! in DEV mode
+22:05:35,365 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:05:39,194 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+22:05:39,874 WARN  ~ Messages file missing for locale en
+22:05:39,875 INFO  ~ Application 'codeboard' is now started !
+22:06:46,456 WARN  ~ Messages file missing for locale en
+22:06:46,483 INFO  ~ assignee = null
+22:06:51,515 INFO  ~ assignee = null
+22:07:48,075 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:07:48,078 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+22:07:48,078 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+22:07:48,536 WARN  ~ You're running Play! in DEV mode
+22:07:48,607 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:07:54,508 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+22:07:55,158 WARN  ~ Messages file missing for locale en
+22:07:55,158 INFO  ~ Application 'codeboard' is now started !
+22:07:55,440 INFO  ~ assignee = null
+22:08:02,837 INFO  ~ assignee = null
+22:08:16,377 INFO  ~ assignee = null
+22:08:21,338 INFO  ~ assignee = null
+22:08:22,613 INFO  ~ assignee = null
+22:08:23,589 INFO  ~ assignee = null
+22:08:32,141 INFO  ~ assignee = null
+22:08:35,700 INFO  ~ assignee = null
+22:08:40,954 INFO  ~ assignee = null
+22:09:09,655 INFO  ~ assignee = null
+22:09:20,906 INFO  ~ assignee = null
+22:09:24,990 INFO  ~ assignee = null
+22:09:29,764 INFO  ~ assignee = null
+22:10:35,512 INFO  ~ assignee = null
+22:10:50,208 INFO  ~ assignee = null
+22:10:51,268 INFO  ~ assignee = null
+22:10:52,239 INFO  ~ assignee = null
+22:10:55,854 INFO  ~ assignee = null
+22:11:02,281 INFO  ~ assignee = null
+22:12:20,150 WARN  ~ Messages file missing for locale en
+22:12:27,376 INFO  ~ assignee = null
+22:12:36,643 INFO  ~ assignee = null
+22:12:47,941 INFO  ~ assignee = null
+22:15:07,066 INFO  ~ assignee = null
+22:15:30,128 INFO  ~ assignee = null
+22:21:36,278 WARN  ~ Messages file missing for locale en
+22:21:58,455 WARN  ~ Messages file missing for locale en
+22:22:14,101 WARN  ~ Messages file missing for locale en
+22:26:22,941 ERROR ~ 
+
+@68i6p0ff6
+Internal Server Error (500) for request GET /projects/omtfcore/issues
+
+Template compilation error (In /app/views/Application/issues.html around line 65)
+The template /app/views/Application/issues.html does not compile : #{list} is not closed.
+
+play.exceptions.TemplateCompilationException: #{list} is not closed.
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:102)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.mvc.Controller.renderTemplate(Controller.java:658)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issues(Application.java:71)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+22:26:31,391 ERROR ~ 
+
+@68i6p0ff7
+Internal Server Error (500) for request GET /projects/omtfcore/issues
+
+Template execution error (In /app/views/Application/issues.html around line 76)
+Execution error occured in template /app/views/Application/issues.html. Exception raised was MissingPropertyException : No such property: since for class: java.sql.Timestamp Possible solutions: time.
+
+play.exceptions.TemplateExecutionException: No such property: since for class: java.sql.Timestamp
+Possible solutions: time
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issues(Application.java:71)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingPropertyException: No such property: since for class: java.sql.Timestamp
+Possible solutions: time
+	at /app/views/Application/issues.html.(line:76)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	... 13 more
+22:34:15,194 WARN  ~ Messages file missing for locale en
+22:34:39,614 WARN  ~ Messages file missing for locale en
+22:56:20,439 WARN  ~ Messages file missing for locale en
+22:56:36,401 WARN  ~ Messages file missing for locale en
+22:57:05,197 WARN  ~ Messages file missing for locale en
+23:02:02,937 ERROR ~ 
+
+@68i6p0fj9
+Internal Server Error (500) for request GET /projects/omtfcore/issues/new
+
+Template compilation error (In /app/views/Application/issue.html around line 113)
+The template /app/views/Application/issue.html does not compile : #{textfield} is not closed.
+
+play.exceptions.TemplateCompilationException: #{textfield} is not closed.
+	at play.templates.GroovyTemplateCompiler.endTag(GroovyTemplateCompiler.java:316)
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:91)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.mvc.Controller.renderTemplate(Controller.java:658)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.newIssue(Application.java:87)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+23:02:17,395 ERROR ~ 
+
+@68i6p0fjh
+Internal Server Error (500) for request GET /projects/omtfcore/issues/new
+
+Template not found (In /app/views/Application/issue.html around line 113)
+The template tags/textfield.html or tags/textfield.tag does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : tags/textfield.html or tags/textfield.tag
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:351)
+	at /app/views/Application/issue.html.(line:113)
+	at play.templates.JavaExtensions.toString(JavaExtensions.java:76)
+	at play.templates.FastTags._form(FastTags.java:108)
+	at /app/views/Application/issue.html.(line:103)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.newIssue(Application.java:87)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+23:04:58,454 WARN  ~ Messages file missing for locale en
+23:06:10,617 WARN  ~ Messages file missing for locale en
+23:06:41,564 WARN  ~ Messages file missing for locale en

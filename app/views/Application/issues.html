@@ -73,7 +73,7 @@
 					        <td class="priority">${issue.priority?.name}</td><td class="subject">
 					        <a href="/issues/${issue.id}">${issue.subject}</a></td>
 					        <td class="assigned_to">${issue.assignee?.firstname} ${issue.assignee?.lastname}</td>
-					        <td class="updated_on" align="center">${issue.updated?.format('dd/MM/yy hh:mm a')}</td>
+					        <td class="updated_on" align="center"><!-- ${issue.updated?.format('dd/MM/yy hh:mm a')} --> ${issue.updated?.since()}</td>
 						</tr>
 					#{/list}
 				</tbody>
