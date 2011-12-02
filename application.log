@@ -1,242 +1,105 @@
-23:36:28,012 ERROR ~ 
+19:17:04,637 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+19:17:04,658 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+19:17:04,673 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+19:17:05,410 WARN  ~ You're running Play! in DEV mode
+19:17:05,488 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+19:17:17,301 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+19:17:18,156 WARN  ~ Messages file missing for locale en
+19:17:18,157 INFO  ~ Application 'codeboard' is now started !
+19:37:53,489 WARN  ~ Messages file missing for locale en
+19:38:06,937 ERROR ~ 
 
-@68gmokp4c
-Internal Server Error (500) for request GET /admin/users/new
+@68i62g3cm
+Internal Server Error (500) for request GET /
 
-Template execution error (In /app/views/Users/show.html around line 2)
-Execution error occured in template /app/views/Users/show.html. Exception raised was NullPointerException : Cannot get property 'login' on null object.
+Template compilation error (In /app/views/main.html around line 8)
+The template /app/views/main.html does not compile : #{theme} is not closed.
 
-play.exceptions.TemplateExecutionException: Cannot get property 'login' on null object
-	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
-	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+play.exceptions.TemplateCompilationException: #{theme} is not closed.
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:102)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.templates.FastTags._extends(FastTags.java:317)
+	at {module:secure}/app/views/tags/secure/check.tag.(line:2)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
 	at play.templates.Template.render(Template.java:26)
 	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
 	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
 	at play.mvc.Controller.renderTemplate(Controller.java:659)
 	at play.mvc.Controller.renderTemplate(Controller.java:639)
 	at play.mvc.Controller.render(Controller.java:694)
-	at controllers.Users.create(Users.java:19)
+	at controllers.Application.index(Application.java:42)
 	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
 	at Invocation.HTTP Request(Play!)
-Caused by: java.lang.NullPointerException: Cannot get property 'login' on null object
-	at /app/views/Users/show.html.(line:2)
-	at play.templates.FastTags._set(FastTags.java:297)
-	at /app/views/Users/show.html.(line:2)
+19:39:28,577 ERROR ~ 
+
+@68i62g3co
+Internal Server Error (500) for request GET /
+
+Template compilation error (In /app/views/main.html around line 8)
+The template /app/views/main.html does not compile : #{theme} is not closed.
+
+play.exceptions.TemplateCompilationException: #{theme} is not closed.
+	at play.templates.TemplateCompiler.generate(TemplateCompiler.java:102)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:15)
+	at play.templates.GroovyTemplateCompiler.compile(GroovyTemplateCompiler.java:41)
+	at play.templates.TemplateCompiler.compile(TemplateCompiler.java:26)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:87)
+	at play.templates.TemplateLoader.load(TemplateLoader.java:172)
+	at play.templates.FastTags._extends(FastTags.java:317)
+	at {module:secure}/app/views/tags/secure/check.tag.(line:2)
 	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
-	... 13 more
-23:37:06,163 ERROR ~ 
-
-@68gmokp4k
-Internal Server Error (500) for request GET /admin/users/new
-
-Template execution error (In /app/views/Users/show.html around line 2)
-Execution error occured in template /app/views/Users/show.html. Exception raised was NullPointerException : Cannot get property 'login' on null object.
-
-play.exceptions.TemplateExecutionException: Cannot get property 'login' on null object
-	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
-	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
 	at play.templates.Template.render(Template.java:26)
 	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
 	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
 	at play.mvc.Controller.renderTemplate(Controller.java:659)
 	at play.mvc.Controller.renderTemplate(Controller.java:639)
 	at play.mvc.Controller.render(Controller.java:694)
-	at controllers.Users.create(Users.java:19)
+	at controllers.Application.index(Application.java:42)
 	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
 	at Invocation.HTTP Request(Play!)
-Caused by: java.lang.NullPointerException: Cannot get property 'login' on null object
-	at /app/views/Users/show.html.(line:2)
-	at play.templates.FastTags._set(FastTags.java:297)
-	at /app/views/Users/show.html.(line:2)
+19:39:42,236 ERROR ~ 
+
+@68i62g3d1
+Internal Server Error (500) for request GET /
+
+Template not found (In /app/views/main.html around line 8)
+The template tags/theme.html or tags/theme.tag does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : tags/theme.html or tags/theme.tag
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:351)
+	at /app/views/main.html.(line:8)
 	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
-	... 13 more
-23:37:24,330 ERROR ~ 
-
-@68gmokp52
-Internal Server Error (500) for request GET /admin/users/new
-
-Template execution error (In /app/views/Users/show.html around line 2)
-Execution error occured in template /app/views/Users/show.html. Exception raised was NullPointerException : Cannot get property 'login' on null object.
-
-play.exceptions.TemplateExecutionException: Cannot get property 'login' on null object
-	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
-	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:262)
 	at play.templates.Template.render(Template.java:26)
 	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
 	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
 	at play.mvc.Controller.renderTemplate(Controller.java:659)
 	at play.mvc.Controller.renderTemplate(Controller.java:639)
 	at play.mvc.Controller.render(Controller.java:694)
-	at controllers.Users.create(Users.java:19)
+	at controllers.Application.index(Application.java:42)
 	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
 	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
 	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
 	at Invocation.HTTP Request(Play!)
-Caused by: java.lang.NullPointerException: Cannot get property 'login' on null object
-	at /app/views/Users/show.html.(line:2)
-	at play.templates.FastTags._set(FastTags.java:297)
-	at /app/views/Users/show.html.(line:2)
-	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
-	... 13 more
-23:40:32,482 INFO  ~ Starting /home/pascal/workspace/codeboard-core
-23:40:32,494 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
-23:40:32,495 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
-23:40:34,017 WARN  ~ You're running Play! in DEV mode
-23:40:34,224 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
-23:40:50,037 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
-23:40:52,255 WARN  ~ Messages file missing for locale en
-23:40:52,258 INFO  ~ Application 'codeboard' is now started !
-23:45:12,255 WARN  ~ Messages file missing for locale en
-00:01:19,651 INFO  ~ directory : innerboard
-00:01:19,652 INFO  ~ directory : pixel-cookers
-00:01:19,652 INFO  ~ directory : classic
-00:01:19,652 INFO  ~ directory : alternate
-00:01:19,652 INFO  ~ directory : default
-00:01:22,244 INFO  ~ directory : innerboard
-00:01:22,244 INFO  ~ directory : pixel-cookers
-00:01:22,244 INFO  ~ directory : classic
-00:01:22,245 INFO  ~ directory : alternate
-00:01:22,245 INFO  ~ directory : default
-00:12:00,474 INFO  ~ directory : innerboard
-00:12:00,474 INFO  ~ directory : pixel-cookers
-00:12:00,474 INFO  ~ directory : classic
-00:12:00,474 INFO  ~ directory : alternate
-00:12:00,474 INFO  ~ directory : default
-00:12:02,768 INFO  ~ directory : innerboard
-00:12:02,768 INFO  ~ directory : pixel-cookers
-00:12:02,768 INFO  ~ directory : classic
-00:12:02,768 INFO  ~ directory : alternate
-00:12:02,768 INFO  ~ directory : default
-21:32:10,251 INFO  ~ Starting /home/pascal/workspace/codeboard-core
-21:32:10,282 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
-21:32:10,283 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
-21:32:10,910 WARN  ~ You're running Play! in DEV mode
-21:32:10,975 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
-21:32:21,559 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
-21:32:22,241 WARN  ~ Messages file missing for locale en
-21:32:22,242 INFO  ~ Application 'codeboard' is now started !
-21:51:58,248 WARN  ~ Messages file missing for locale en
-22:12:15,492 INFO  ~ Starting /home/pascal/workspace/codeboard-core
-22:12:15,496 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
-22:12:15,497 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
-22:12:16,010 WARN  ~ You're running Play! in DEV mode
-22:12:16,079 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
-22:12:21,433 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
-22:12:22,064 WARN  ~ Messages file missing for locale en
-22:12:22,064 INFO  ~ Application 'codeboard' is now started !
-22:17:07,563 INFO  ~ assignee = null
-22:17:07,761 ERROR ~ 
-
-@68hb4aa37
-Internal Server Error (500) for request POST /application/saveissue?projectId=2
-
-Execution exception (In /app/controllers/Application.java around line 101)
-IllegalArgumentException occured : Provided id of the wrong type for class models.Enumeration. Expected: class java.lang.Long, got class java.lang.String
-
-play.exceptions.JavaExecutionException: Provided id of the wrong type for class models.Enumeration. Expected: class java.lang.Long, got class java.lang.String
-	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:229)
-	at Invocation.HTTP Request(Play!)
-Caused by: java.lang.IllegalArgumentException: Provided id of the wrong type for class models.Enumeration. Expected: class java.lang.Long, got class java.lang.String
-	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:629)
-	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:589)
-	at play.db.jpa.JPQL.findById(JPQL.java:34)
-	at models.Enumeration.findById(Enumeration.java)
-	at controllers.Application.saveIssue(Application.java:101)
-	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
-	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
-	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
-	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
-	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
-	... 1 more
-Caused by: org.hibernate.TypeMismatchException: Provided id of the wrong type for class models.Enumeration. Expected: class java.lang.Long, got class java.lang.String
-	at org.hibernate.event.def.DefaultLoadEventListener.onLoad(DefaultLoadEventListener.java:135)
-	at org.hibernate.impl.SessionImpl.fireLoad(SessionImpl.java:1090)
-	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:1005)
-	at org.hibernate.impl.SessionImpl.get(SessionImpl.java:998)
-	at org.hibernate.ejb.AbstractEntityManagerImpl.find(AbstractEntityManagerImpl.java:614)
-	... 10 more
-22:17:40,190 ERROR ~ 
-
-@68hb4aa38
-Internal Server Error (500) for request POST /application/saveissue?projectId=2
-
-Compilation error (In /app/controllers/Application.java around line 100)
-The file /app/controllers/Application.java could not be compiled. Error raised is : Type mismatch: cannot convert from GenericModel.JPAQuery to State
-
-play.exceptions.CompilationException: Type mismatch: cannot convert from GenericModel.JPAQuery to State
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-22:19:04,276 ERROR ~ 
-
-@68hb4aa39
-Internal Server Error (500) for request POST /application/saveissue?projectId=2
-
-Compilation error (In /app/controllers/Application.java around line 90)
-The file /app/controllers/Application.java could not be compiled. Error raised is : S cannot be resolved to a type
-
-play.exceptions.CompilationException: S cannot be resolved to a type
-	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
-	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
-	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
-	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
-	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
-	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
-	at play.Play.detectChanges(Play.java:595)
-	at play.Invoker$Invocation.init(Invoker.java:186)
-	at Invocation.HTTP Request(Play!)
-22:19:41,616 WARN  ~ Messages file missing for locale en
-22:19:41,652 INFO  ~ assignee = null
-22:20:03,298 INFO  ~ assignee = null
-22:20:14,760 INFO  ~ assignee = null
-22:22:54,721 INFO  ~ directory : innerboard
-22:22:54,721 INFO  ~ directory : pixel-cookers
-22:22:54,721 INFO  ~ directory : classic
-22:22:54,722 INFO  ~ directory : alternate
-22:22:54,722 INFO  ~ directory : default
-22:22:59,811 INFO  ~ directory : innerboard
-22:22:59,812 INFO  ~ directory : pixel-cookers
-22:22:59,812 INFO  ~ directory : classic
-22:22:59,812 INFO  ~ directory : alternate
-22:22:59,812 INFO  ~ directory : default
-22:23:06,210 INFO  ~ directory : innerboard
-22:23:06,210 INFO  ~ directory : pixel-cookers
-22:23:06,210 INFO  ~ directory : classic
-22:23:06,210 INFO  ~ directory : alternate
-22:23:06,210 INFO  ~ directory : default
-22:23:12,527 INFO  ~ directory : innerboard
-22:23:12,528 INFO  ~ directory : pixel-cookers
-22:23:12,528 INFO  ~ directory : classic
-22:23:12,528 INFO  ~ directory : alternate
-22:23:12,528 INFO  ~ directory : default
-22:23:16,720 INFO  ~ directory : innerboard
-22:23:16,720 INFO  ~ directory : pixel-cookers
-22:23:16,720 INFO  ~ directory : classic
-22:23:16,720 INFO  ~ directory : alternate
-22:23:16,720 INFO  ~ directory : default
-22:23:20,871 INFO  ~ directory : innerboard
-22:23:20,871 INFO  ~ directory : pixel-cookers
-22:23:20,871 INFO  ~ directory : classic
-22:23:20,871 INFO  ~ directory : alternate
-22:23:20,871 INFO  ~ directory : default
-22:25:54,864 INFO  ~ directory : innerboard
-22:25:54,864 INFO  ~ directory : pixel-cookers
-22:25:54,864 INFO  ~ directory : classic
-22:25:54,865 INFO  ~ directory : alternate
-22:25:54,865 INFO  ~ directory : default
+19:45:40,212 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+19:45:40,216 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+19:45:40,216 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+19:45:40,697 WARN  ~ You're running Play! in DEV mode
+19:45:40,763 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+19:45:43,937 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+19:45:44,546 WARN  ~ Messages file missing for locale en
+19:45:44,547 INFO  ~ Application 'codeboard' is now started !
