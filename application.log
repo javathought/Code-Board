@@ -334,3 +334,11 @@ play.exceptions.TemplateNotFoundException: Template not found : tags/textfield.h
 23:04:58,454 WARN  ~ Messages file missing for locale en
 23:06:10,617 WARN  ~ Messages file missing for locale en
 23:06:41,564 WARN  ~ Messages file missing for locale en
+23:13:56,960 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:13:56,964 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:13:56,964 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:13:57,420 WARN  ~ You're running Play! in DEV mode
+23:13:57,476 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:14:59,472 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:15:00,112 WARN  ~ Messages file missing for locale en
+23:15:00,113 INFO  ~ Application 'codeboard' is now started !
