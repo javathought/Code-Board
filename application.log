@@ -342,3 +342,1684 @@ play.exceptions.TemplateNotFoundException: Template not found : tags/textfield.h
 23:14:59,472 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
 23:15:00,112 WARN  ~ Messages file missing for locale en
 23:15:00,113 INFO  ~ Application 'codeboard' is now started !
+00:27:50,103 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+00:27:50,107 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+00:27:50,107 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+00:27:50,687 WARN  ~ You're running Play! in DEV mode
+00:27:50,783 ERROR ~ Could not bind on port 9090
+00:28:00,791 WARN  ~ Messages file missing for locale en
+00:29:54,010 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+00:29:54,014 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+00:29:54,014 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+00:29:54,481 WARN  ~ You're running Play! in DEV mode
+00:29:54,547 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+00:30:00,303 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+00:30:00,947 WARN  ~ Messages file missing for locale en
+00:30:00,947 INFO  ~ Application 'codeboard' is now started !
+00:31:17,534 ERROR ~ 
+
+@68i7hhgh2
+Internal Server Error (500) for request GET /admin/projects
+
+Compilation error (In /app/models/Project.java around line 12)
+The file /app/models/Project.java could not be compiled. Error raised is : Required cannot be resolved to a type
+
+play.exceptions.CompilationException: Required cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+00:31:28,981 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+00:31:28,984 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+00:31:28,984 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+00:31:29,423 WARN  ~ You're running Play! in DEV mode
+00:31:29,489 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+00:31:39,502 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+00:31:40,128 WARN  ~ Messages file missing for locale en
+00:31:40,128 INFO  ~ Application 'codeboard' is now started !
+19:01:29,741 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+19:01:29,759 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+19:01:29,760 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+19:01:30,488 WARN  ~ You're running Play! in DEV mode
+19:01:30,562 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+19:01:42,845 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+19:01:43,668 WARN  ~ Messages file missing for locale en
+19:01:43,669 INFO  ~ Application 'codeboard' is now started !
+19:27:18,162 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+19:27:18,215 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+19:27:18,231 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+19:27:19,024 WARN  ~ You're running Play! in DEV mode
+19:27:19,089 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+19:27:24,960 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+19:27:25,670 WARN  ~ Messages file missing for locale en
+19:27:25,671 INFO  ~ Application 'codeboard' is now started !
+21:47:05,390 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+21:47:05,439 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+21:47:05,440 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+21:47:05,986 WARN  ~ You're running Play! in DEV mode
+21:47:06,054 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+21:47:11,461 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+21:47:12,417 WARN  ~ Messages file missing for locale en
+21:47:12,418 INFO  ~ Application 'codeboard' is now started !
+21:47:31,139 ERROR ~ 
+
+@68k5jkb3h
+Internal Server Error (500) for request GET /issues/15
+
+Template execution error (In /app/views/Application/issue.html around line 7)
+Execution error occured in template /app/views/Application/issue.html. Exception raised was TagInternalException : File not found: /public/stylesheets/markitup/skins/markitup/style.css.
+
+play.exceptions.TemplateExecutionException: File not found: /public/stylesheets/markitup/skins/markitup/style.css
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:376)
+	at /app/views/Application/issue.html.(line:7)
+	at play.templates.FastTags._set(FastTags.java:297)
+	at /app/views/Application/issue.html.(line:6)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.TagInternalException: File not found: /public/stylesheets/markitup/skins/markitup/style.css
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	... 17 more
+21:48:20,852 ERROR ~ 
+
+@68k5jkb3n
+Internal Server Error (500) for request GET /issues/15
+
+Template execution error (In /app/views/Application/issue.html around line 8)
+Execution error occured in template /app/views/Application/issue.html. Exception raised was TagInternalException : File not found: /public/stylesheets/markitup/sets/textile/style.css.
+
+play.exceptions.TemplateExecutionException: File not found: /public/stylesheets/markitup/sets/textile/style.css
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:376)
+	at /app/views/Application/issue.html.(line:8)
+	at play.templates.FastTags._set(FastTags.java:297)
+	at /app/views/Application/issue.html.(line:6)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.TagInternalException: File not found: /public/stylesheets/markitup/sets/textile/style.css
+	at {play}/framework/templates/tags/stylesheet.tag.(line:19)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	... 17 more
+21:48:23,228 ERROR ~ 
+
+@68k5jkb43
+Internal Server Error (500) for request GET /issues/15
+
+Template execution error (In /app/views/Application/issue.html around line 8)
+Execution error occured in template /app/views/Application/issue.html. Exception raised was TagInternalException : File not found: /public/stylesheets/markitup/sets/textile/style.css.
+
+play.exceptions.TemplateExecutionException: File not found: /public/stylesheets/markitup/sets/textile/style.css
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:376)
+	at /app/views/Application/issue.html.(line:8)
+	at play.templates.FastTags._set(FastTags.java:297)
+	at /app/views/Application/issue.html.(line:6)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: play.exceptions.TagInternalException: File not found: /public/stylesheets/markitup/sets/textile/style.css
+	at {play}/framework/templates/tags/stylesheet.tag.(line:19)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	... 17 more
+21:51:35,424 INFO  ~ assignee = Pascal Abaziou
+22:21:25,651 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:21:25,655 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+22:21:25,655 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+22:21:26,106 WARN  ~ You're running Play! in DEV mode
+22:21:26,172 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:21:29,756 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+22:21:30,724 WARN  ~ Messages file missing for locale en
+22:21:30,725 INFO  ~ Application 'codeboard' is now started !
+22:22:49,891 ERROR ~ 
+
+@68k5o7de6
+Internal Server Error (500) for request GET /issues/1
+
+Template execution error (In /app/views/Application/issue.html around line 4)
+Execution error occured in template /app/views/Application/issue.html. Exception raised was MissingMethodException : No signature of method: Template_1015.$() is applicable for argument types: (Template_1015$_run_closure1_closure2_closure3_closure10) values: [Template_1015$_run_closure1_closure2_closure3_closure10@620f1735] Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String).
+
+play.exceptions.TemplateExecutionException: No signature of method: Template_1015.$() is applicable for argument types: (Template_1015$_run_closure1_closure2_closure3_closure10) values: [Template_1015$_run_closure1_closure2_closure3_closure10@620f1735]
+Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String)
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingMethodException: No signature of method: Template_1015.$() is applicable for argument types: (Template_1015$_run_closure1_closure2_closure3_closure10) values: [Template_1015$_run_closure1_closure2_closure3_closure10@620f1735]
+Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String)
+	at /app/views/Application/issue.html.(line:4)
+	at play.templates.FastTags._set(FastTags.java:297)
+	at /app/views/Application/issue.html.(line:2)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	... 13 more
+22:30:59,515 INFO  ~ assignee = Pascal Abaziou
+22:31:14,693 INFO  ~ assignee = Pascal Abaziou
+22:35:07,943 INFO  ~ assignee = null
+22:41:12,096 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:41:12,108 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:41:12,116 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:41:12,117 INFO  ~ Module markdown is available (/home/pascal/workspace/codeboard-core/modules/markdown-1.5)
+22:41:12,646 WARN  ~ You're running Play! in DEV mode
+22:41:12,718 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:41:18,810 ERROR ~ 
+
+@68k60n2d4
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:41:57,820 ERROR ~ 
+
+@68k60n2d5
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:42:02,893 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:42:02,896 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:42:02,897 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:42:02,897 INFO  ~ Module markdown is available (/home/pascal/workspace/codeboard-core/modules/markdown-1.5)
+22:42:03,348 WARN  ~ You're running Play! in DEV mode
+22:42:03,414 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:42:08,275 ERROR ~ 
+
+@68k60pni0
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:42:10,816 ERROR ~ 
+
+@68k60pni1
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:42:26,939 ERROR ~ 
+
+@68k60pni2
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:42:31,965 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:42:31,969 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:42:31,969 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:42:32,418 WARN  ~ You're running Play! in DEV mode
+22:42:32,484 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:43:45,070 ERROR ~ 
+
+@68k615amh
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:43:48,865 ERROR ~ 
+
+@68k615ami
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:44:23,514 ERROR ~ 
+
+@68k615amj
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:44:24,658 ERROR ~ 
+
+@68k615amk
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:44:29,481 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:44:29,484 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:44:29,484 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:44:29,965 WARN  ~ You're running Play! in DEV mode
+22:44:30,032 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:44:32,387 ERROR ~ 
+
+@68k6182mi
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:44:34,131 ERROR ~ 
+
+@68k6182mj
+Internal Server Error (500) for request GET /issues/8
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:44:38,354 ERROR ~ 
+
+@68k6182mk
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:44:40,558 ERROR ~ 
+
+@68k6182ml
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:45:11,496 ERROR ~ 
+
+@68k6182mm
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:45:16,408 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:45:16,411 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:45:16,412 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:45:16,855 WARN  ~ You're running Play! in DEV mode
+22:45:16,921 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:45:25,479 ERROR ~ 
+
+@68k61b3ak
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:45:30,178 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:45:30,181 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:45:30,181 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:45:30,630 WARN  ~ You're running Play! in DEV mode
+22:45:30,698 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:45:32,690 ERROR ~ 
+
+@68k61be1o
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:47:31,239 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:47:31,242 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:47:31,242 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:47:31,688 WARN  ~ You're running Play! in DEV mode
+22:47:31,754 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:47:36,075 ERROR ~ 
+
+@68k61iefk
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:47:39,053 ERROR ~ 
+
+@68k61iefl
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:47:51,300 ERROR ~ 
+
+@68k61iefm
+Internal Server Error (500) for request GET /admin/settings
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:47:54,630 ERROR ~ 
+
+@68k61iefn
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:48:27,981 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:48:27,984 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:48:27,985 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:48:28,424 WARN  ~ You're running Play! in DEV mode
+22:48:28,490 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:48:31,390 ERROR ~ 
+
+@68k61lib5
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:48:34,618 ERROR ~ 
+
+@68k61lib6
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:49:14,827 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:49:14,830 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:49:14,831 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:49:15,303 WARN  ~ You're running Play! in DEV mode
+22:49:15,372 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:49:18,623 ERROR ~ 
+
+@68k61oa50
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:49:44,745 ERROR ~ 
+
+@68k61oa51
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:49:54,040 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:49:54,043 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:49:54,044 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:49:54,499 WARN  ~ You're running Play! in DEV mode
+22:49:54,566 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:49:57,357 ERROR ~ 
+
+@68k620ffi
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:55:37,998 ERROR ~ 
+
+@68k620ffj
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:55:43,042 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:55:43,045 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:55:43,046 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+22:55:43,507 WARN  ~ You're running Play! in DEV mode
+22:55:43,573 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:55:46,992 ERROR ~ 
+
+@68k62kcl2
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:secure}/app/controllers/Secure.java around line 187)
+The file {module:secure}/app/controllers/Secure.java could not be compiled. Error raised is : The method invokeChildOrStatic(Class&lt;Secure.Security>, String, Object[]) is undefined for the type Java
+
+play.exceptions.CompilationException: The method invokeChildOrStatic(Class<Secure.Security>, String, Object[]) is undefined for the type Java
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:412)
+	at play.classloading.ApplicationClassloader.getAssignableClasses(ApplicationClassloader.java:441)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+22:56:02,703 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+22:56:02,707 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+22:56:02,708 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+22:56:03,173 WARN  ~ You're running Play! in DEV mode
+22:56:03,239 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:56:07,090 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+22:56:07,740 WARN  ~ Messages file missing for locale en
+22:56:07,741 INFO  ~ Application 'codeboard' is now started !
+22:56:16,095 ERROR ~ 
+
+@68k62lia4
+Internal Server Error (500) for request GET /issues/8
+
+Template execution error (In /app/views/Application/issue.html around line 70)
+Execution error occured in template /app/views/Application/issue.html. Exception raised was MissingMethodException : No signature of method: Template_1005.$() is applicable for argument types: (Template_1005$_run_closure1_closure2_closure6) values: [Template_1005$_run_closure1_closure2_closure6@6b8e0782] Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String).
+
+play.exceptions.TemplateExecutionException: No signature of method: Template_1005.$() is applicable for argument types: (Template_1005$_run_closure1_closure2_closure6) values: [Template_1005$_run_closure1_closure2_closure6@6b8e0782]
+Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String)
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingMethodException: No signature of method: Template_1005.$() is applicable for argument types: (Template_1005$_run_closure1_closure2_closure6) values: [Template_1005$_run_closure1_closure2_closure6@6b8e0782]
+Possible solutions: _(java.lang.String), is(java.lang.Object), run(), run(), any(), get(java.lang.String)
+	at /app/views/Application/issue.html.(line:70)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	... 13 more
+22:58:45,368 ERROR ~ 
+
+@68k62lia5
+Internal Server Error (500) for request GET /issues/8
+
+Template compilation error (In /app/views/Application/issue.html around line 70)
+The template /app/views/Application/issue.html does not compile : unexpected token: ];play.templates.TagContext.enterTag( 
+
+play.exceptions.TemplateCompilationException: unexpected token: ];play.templates.TagContext.enterTag( 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:171)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:192)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+22:59:06,620 ERROR ~ 
+
+@68k62lia6
+Internal Server Error (500) for request GET /issues/8
+
+Template compilation error (In /app/views/Application/issue.html around line 70)
+The template /app/views/Application/issue.html does not compile : unexpected token: ];play.templates.TagContext.enterTag( 
+
+play.exceptions.TemplateCompilationException: unexpected token: ];play.templates.TagContext.enterTag( 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:171)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:192)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+22:59:32,070 ERROR ~ 
+
+@68k62lia7
+Internal Server Error (500) for request GET /issues/8
+
+Template compilation error (In /app/views/Application/issue.html around line 70)
+The template /app/views/Application/issue.html does not compile : unexpected token: ];play.templates.TagContext.enterTag( 
+
+play.exceptions.TemplateCompilationException: unexpected token: ];play.templates.TagContext.enterTag( 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:171)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:192)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+22:59:43,442 ERROR ~ 
+
+@68k62liaa
+Internal Server Error (500) for request GET /issues/8
+
+Template execution error (In /app/views/Application/issue.html around line 74)
+Execution error occured in template /app/views/Application/issue.html. Exception raised was MissingMethodException : No signature of method: java.lang.String.markdown() is applicable for argument types: () values: [].
+
+play.exceptions.TemplateExecutionException: No signature of method: java.lang.String.markdown() is applicable for argument types: () values: []
+	at play.templates.BaseTemplate.throwException(BaseTemplate.java:84)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:252)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:659)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.issue(Application.java:131)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+Caused by: groovy.lang.MissingMethodException: No signature of method: java.lang.String.markdown() is applicable for argument types: () values: []
+	at /app/views/Application/issue.html.(line:74)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	... 13 more
+23:34:48,035 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:34:48,038 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:34:48,039 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:34:48,480 WARN  ~ You're running Play! in DEV mode
+23:34:48,547 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:34:52,079 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:34:52,666 WARN  ~ Messages file missing for locale en
+23:34:52,667 INFO  ~ Application 'codeboard' is now started !
+23:35:15,565 ERROR ~ 
+
+@68k67npco
+api.textile action not found
+
+Action not found
+Action api.textile could not be found. Error raised is Controller controllers.api not found
+
+play.exceptions.ActionNotFoundException: Action api.textile not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:588)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.api not found
+	... 3 more
+23:39:21,817 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:39:21,821 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:39:21,821 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:39:22,277 WARN  ~ You're running Play! in DEV mode
+23:39:22,344 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:39:25,736 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:39:26,368 WARN  ~ Messages file missing for locale en
+23:39:26,369 INFO  ~ Application 'codeboard' is now started !
+23:39:30,951 ERROR ~ 
+
+@68k68de9c
+api.textile action not found
+
+Action not found
+Action api.textile could not be found. Error raised is Controller controllers.api not found
+
+play.exceptions.ActionNotFoundException: Action api.textile not found
+	at play.mvc.ActionInvoker.getActionMethod(ActionInvoker.java:588)
+	at play.mvc.ActionInvoker.resolve(ActionInvoker.java:85)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.Exception: Controller controllers.api not found
+	... 3 more
+23:40:00,107 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:40:00,110 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:40:00,111 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:40:00,559 WARN  ~ You're running Play! in DEV mode
+23:40:00,625 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:40:03,662 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:40:04,278 WARN  ~ Messages file missing for locale en
+23:40:04,279 INFO  ~ Application 'codeboard' is now started !
+23:40:08,780 ERROR ~ 
+
+@68k68fibl
+Internal Server Error (500) for request POST /api/textile
+
+Template not found (In /app/controllers/Application.java around line 138)
+The template Texte normaltitreh1. Your title here...<h1 id="ddd">ddd<h1 id="Yourtitlehere...">Your title here...testtotoarticle unarticle deux Machin a dit  does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : <p>Texte normal</p><p><em>titre</em><br/>h1. Your title here...</p><h1 id="ddd">ddd</h1><h1 id="Yourtitlehere...">Your title here...</h1><p><strong>test</strong></p><ul><li>toto</li></ul><ol><li>article un</li><li>article deux </li></ol><blockquote><p>Machin a dit<br/> </p></blockquote>
+	at play.mvc.Controller.renderTemplate(Controller.java:666)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.textile(Application.java:138)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+23:40:38,266 ERROR ~ 
+
+@68k68fibm
+Internal Server Error (500) for request GET /issues/1
+
+Compilation error (In /app/controllers/Application.java around line 137)
+The file /app/controllers/Application.java could not be compiled. Error raised is : Syntax error, insert ";" to complete BlockStatements
+
+play.exceptions.CompilationException: Syntax error, insert ";" to complete BlockStatements
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:474)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:310)
+	at play.Play.detectChanges(Play.java:595)
+	at play.Invoker$Invocation.init(Invoker.java:186)
+	at Invocation.HTTP Request(Play!)
+23:40:50,799 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:40:50,803 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:40:50,803 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:40:51,254 WARN  ~ You're running Play! in DEV mode
+23:40:51,319 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:40:55,226 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:40:55,846 WARN  ~ Messages file missing for locale en
+23:40:55,847 INFO  ~ Application 'codeboard' is now started !
+23:41:01,482 INFO  ~ date = Texte normal
+
+_titre_
+h1. Your title here...
+
+h1. ddd
+
+h1. Your title here...
+
+*test*
+
+* toto
+
+# article un
+# article deux 
+
+bq. Machin a dit
+ 
+23:41:01,545 ERROR ~ 
+
+@68k68igjf
+Internal Server Error (500) for request POST /api/textile
+
+Template not found (In /app/controllers/Application.java around line 138)
+The template Texte normaltitreh1. Your title here...<h1 id="ddd">ddd<h1 id="Yourtitlehere...">Your title here...testtotoarticle unarticle deux Machin a dit  does not exist.
+
+play.exceptions.TemplateNotFoundException: Template not found : <p>Texte normal</p><p><em>titre</em><br/>h1. Your title here...</p><h1 id="ddd">ddd</h1><h1 id="Yourtitlehere...">Your title here...</h1><p><strong>test</strong></p><ul><li>toto</li></ul><ol><li>article un</li><li>article deux </li></ol><blockquote><p>Machin a dit<br/> </p></blockquote>
+	at play.mvc.Controller.renderTemplate(Controller.java:666)
+	at play.mvc.Controller.renderTemplate(Controller.java:639)
+	at play.mvc.Controller.render(Controller.java:694)
+	at controllers.Application.textile(Application.java:138)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	at Invocation.HTTP Request(Play!)
+23:42:02,353 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:42:02,356 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:42:02,357 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:42:02,816 WARN  ~ You're running Play! in DEV mode
+23:42:02,883 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:42:05,875 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:42:06,512 WARN  ~ Messages file missing for locale en
+23:42:06,512 INFO  ~ Application 'codeboard' is now started !
+23:42:11,270 INFO  ~ date = Texte normal
+
+_titre_
+h1. Your title here...
+
+h1. ddd
+
+h1. Your title here...
+
+*test*
+
+* toto
+
+# article un
+# article deux 
+
+bq. Machin a dit
+ 
+23:43:03,522 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:43:03,526 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:43:03,526 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:43:03,992 WARN  ~ You're running Play! in DEV mode
+23:43:04,057 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:43:07,507 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:43:08,125 WARN  ~ Messages file missing for locale en
+23:43:08,126 INFO  ~ Application 'codeboard' is now started !
+23:43:14,194 ERROR ~ 
+
+@68k6904ai
+Internal Server Error (500) for request POST /api/textile
+
+Execution exception (In /app/ext/TextileExtension.java around line 21)
+NullPointerException occured : null
+
+play.exceptions.JavaExecutionException
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:229)
+	at Invocation.HTTP Request(Play!)
+Caused by: java.lang.NullPointerException
+	at java.util.regex.Matcher.getTextLength(Matcher.java:1151)
+	at java.util.regex.Matcher.reset(Matcher.java:308)
+	at java.util.regex.Matcher.<init>(Matcher.java:228)
+	at java.util.regex.Pattern.matcher(Pattern.java:905)
+	at jj.play.org.eclipse.mylyn.internal.wikitext.textile.core.TextileContentState.preprocessContent(TextileContentState.java:44)
+	at jj.play.org.eclipse.mylyn.internal.wikitext.textile.core.TextileContentState.setMarkupContent(TextileContentState.java:39)
+	at jj.play.org.eclipse.mylyn.wikitext.core.parser.markup.MarkupLanguage.processContent(MarkupLanguage.java:112)
+	at jj.play.org.eclipse.mylyn.wikitext.textile.core.TextileLanguage.processContent(TextileLanguage.java:221)
+	at jj.play.org.eclipse.mylyn.wikitext.core.parser.MarkupParser.parse(MarkupParser.java:92)
+	at jj.play.org.eclipse.mylyn.wikitext.core.parser.MarkupParser.parse(MarkupParser.java:82)
+	at ext.TextileExtension.textile(TextileExtension.java:21)
+	at controllers.Application.textile(Application.java:137)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:546)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:500)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:476)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:471)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:159)
+	... 1 more
+23:43:32,626 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+23:43:32,630 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+23:43:32,630 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+23:43:33,080 WARN  ~ You're running Play! in DEV mode
+23:43:33,144 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+23:43:36,619 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+23:43:37,279 WARN  ~ Messages file missing for locale en
+23:43:37,280 INFO  ~ Application 'codeboard' is now started !
+23:47:14,512 INFO  ~ assignee = Pascal Abaziou
+00:09:10,593 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+00:09:10,597 INFO  ~ Module secure is available (/opt/play-1.2.3/modules/secure)
+00:09:10,598 INFO  ~ Module crud is available (/opt/play-1.2.3/modules/crud)
+00:09:11,082 WARN  ~ You're running Play! in DEV mode
+00:09:11,150 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+00:09:15,936 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+00:09:16,526 WARN  ~ Messages file missing for locale en
+00:09:16,526 INFO  ~ Application 'codeboard' is now started !
+00:12:59,873 INFO  ~ assignee = null
+00:19:26,760 INFO  ~ assignee = Pascal Abaziou
+00:19:50,618 INFO  ~ assignee = Pascal Abaziou
+00:20:06,779 INFO  ~ assignee = Pascal Abaziou
+00:40:20,218 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+00:40:20,730 WARN  ~ You're running Play! in DEV mode
+00:40:20,790 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+00:53:20,379 ERROR ~ Cannot include routes for module crud (not found)
+00:53:20,382 ERROR ~ Cannot include routes for module crud (not found)
+00:53:21,936 ERROR ~ 
+
+@68k6i5l91
+Internal Server Error (500) for request GET /admin
+
+Compilation error (In /app/controllers/States.java around line 5)
+The file /app/controllers/States.java could not be compiled. Error raised is : CRUD cannot be resolved to a type
+
+play.exceptions.CompilationException: CRUD cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClassloader.getAllClasses(ApplicationClassloader.java:424)
+	at play.Play.start(Play.java:505)
+	at play.Play.detectChanges(Play.java:618)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+00:54:09,553 ERROR ~ 
+
+@68k6i5l95
+Internal Server Error (500) for request GET /admin
+
+Compilation error (In /app/controllers/Projects.java around line 8)
+The file /app/controllers/Projects.java could not be compiled. Error raised is : CRUD cannot be resolved to a type
+
+play.exceptions.CompilationException: CRUD cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+00:54:10,622 ERROR ~ 
+
+@68k6i5l96
+Internal Server Error (500) for request GET /admin
+
+Compilation error (In /app/controllers/Projects.java around line 8)
+The file /app/controllers/Projects.java could not be compiled. Error raised is : CRUD cannot be resolved to a type
+
+play.exceptions.CompilationException: CRUD cannot be resolved to a type
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+00:54:53,728 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+00:54:53,732 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+00:54:53,732 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+00:54:54,189 WARN  ~ You're running Play! in DEV mode
+00:54:54,249 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+00:55:08,223 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+00:55:08,835 WARN  ~ Messages file missing for locale en
+00:55:08,836 INFO  ~ Application 'codeboard' is now started !
+00:55:46,601 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+00:55:46,605 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+00:55:46,605 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+00:55:47,066 WARN  ~ You're running Play! in DEV mode
+00:55:47,123 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+00:55:50,496 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+00:55:51,108 WARN  ~ Messages file missing for locale en
+00:55:51,108 INFO  ~ Application 'codeboard' is now started !
+00:57:35,268 INFO  ~ assignee = null
+17:50:34,935 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+17:50:35,003 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+17:50:35,027 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+17:50:35,850 WARN  ~ You're running Play! in DEV mode
+17:50:35,922 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+17:50:42,179 ERROR ~ 
+
+@68kblkipj
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+17:50:42,434 ERROR ~ 
+
+@68kblkipn
+Internal Server Error (500) for request GET /favicon.ico
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+17:50:42,515 ERROR ~ 
+
+@68kblkipo
+Internal Server Error (500) for request GET /favicon.ico
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+17:51:20,678 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+17:51:20,681 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+17:51:20,682 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+17:51:21,220 WARN  ~ You're running Play! in DEV mode
+17:51:21,270 ERROR ~ Could not bind on port 9090
+17:51:27,941 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+17:51:27,945 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+17:51:27,945 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+17:51:28,395 WARN  ~ You're running Play! in DEV mode
+17:51:28,454 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+17:51:34,795 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+17:51:35,607 WARN  ~ Messages file missing for locale en
+17:51:35,608 INFO  ~ Application 'codeboard' is now started !
+17:53:07,604 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+17:53:07,608 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+17:53:07,608 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+17:53:08,063 WARN  ~ You're running Play! in DEV mode
+17:53:08,130 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+17:53:11,161 ERROR ~ 
+
+@68kbm368b
+Internal Server Error (500) for request GET /
+
+Compilation error (In {module:crud}/app/controllers/CRUD.java around line 105)
+The file {module:crud}/app/controllers/CRUD.java could not be compiled. Error raised is : The method getRootParamNode() is undefined for the type Scope.Params
+
+play.exceptions.CompilationException: The method getRootParamNode() is undefined for the type Scope.Params
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:672)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:516)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:278)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:249)
+	at play.classloading.ApplicationClassloader.loadApplicationClass(ApplicationClassloader.java:156)
+	at play.classloading.ApplicationClassloader.loadClass(ApplicationClassloader.java:84)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:266)
+	at play.templates.GroovyTemplate$ExecutableTemplate._(GroovyTemplate.java:385)
+	at {module:crud}/app/views/tags/crud/types.tag.(line:3)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.GroovyTemplate$ExecutableTemplate.invokeTag(GroovyTemplate.java:374)
+	at {module:crud}/conf/routes.(line:4)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:229)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:184)
+	at play.mvc.Router.parse(Router.java:162)
+	at play.mvc.Router.parse(Router.java:190)
+	at play.mvc.Router.parse(Router.java:164)
+	at play.mvc.Router.load(Router.java:50)
+	at play.mvc.Router.detectChanges(Router.java:219)
+	at Invocation.HTTP Request(Play!)
+17:56:36,320 INFO  ~ Starting /home/pascal/workspace/codeboard-core
+17:56:36,324 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+17:56:36,324 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+17:56:36,792 WARN  ~ You're running Play! in DEV mode
+17:56:36,847 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+17:56:40,504 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+17:56:41,162 WARN  ~ Messages file missing for locale en
+17:56:41,163 INFO  ~ Application 'codeboard' is now started !
