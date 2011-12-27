@@ -16,7 +16,7 @@ import play.db.jpa.Model;
 public class Configuration extends Model {
     
 
-	@Column(name="conf_type",length=2000)
+	@Column(name="setting_type",length=2000)
 	public String type;
 	public String look;
 	@MaxSize(2000)
