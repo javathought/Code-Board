@@ -20,7 +20,7 @@ public class Configuration extends Model {
 	public String type;
 	public String look;
 	@MaxSize(2000)
-	@Column(length=2000)
+	@Column(name="text", length=2000)
 	public String welcome_text;
 	
 	public static String getTheme () {
