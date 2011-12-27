@@ -5270,3 +5270,16 @@ Caused by: java.sql.BatchUpdateException: Cannot delete or update a parent row: 
 	at org.hibernate.jdbc.BatchingBatcher.doExecuteBatch(BatchingBatcher.java:70)
 	at org.hibernate.jdbc.AbstractBatcher.executeBatch(AbstractBatcher.java:268)
 	... 15 more
+22:18:02,364 INFO  ~ Starting /home/pascal/Projects/workspace/codeboard-core
+22:18:02,368 INFO  ~ Module secure is available (/opt/play-1.2.4/modules/secure)
+22:18:02,368 INFO  ~ Module crud is available (/opt/play-1.2.4/modules/crud)
+22:18:02,837 WARN  ~ You're running Play! in DEV mode
+22:18:02,894 INFO  ~ Listening for HTTP on port 9090 (Waiting a first request to start) ...
+22:18:07,778 INFO  ~ Connected to jdbc:mysql://localhost/playmine?useUnicode=yes&characterEncoding=UTF-8&connectionCollation=utf8_general_ci
+22:18:08,437 WARN  ~ Messages file missing for locale en
+22:18:08,438 INFO  ~ Application 'codeboard' is now started !
+22:18:08,666 INFO  ~ directory : innerboard
+22:18:08,666 INFO  ~ directory : pixel-cookers
+22:18:08,666 INFO  ~ directory : classic
+22:18:08,666 INFO  ~ directory : alternate
+22:18:08,666 INFO  ~ directory : default

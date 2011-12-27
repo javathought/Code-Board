@@ -5,6 +5,7 @@ import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import play.Logger;
@@ -15,6 +16,7 @@ import play.db.jpa.Model;
 public class Configuration extends Model {
     
 
+	@Column(name="setting_type")
 	public String type;
 	public String look;
 	@MaxSize(2000)
