@@ -5283,3 +5283,93 @@ Caused by: java.sql.BatchUpdateException: Cannot delete or update a parent row: 
 22:18:08,666 INFO  ~ directory : classic
 22:18:08,666 INFO  ~ directory : alternate
 22:18:08,666 INFO  ~ directory : default
+23:26:58,239 WARN  ~ Messages file missing for locale en
+23:27:04,280 INFO  ~ directory : innerboard
+23:27:04,281 INFO  ~ directory : pixel-cookers
+23:27:04,281 INFO  ~ directory : classic
+23:27:04,281 INFO  ~ directory : alternate
+23:27:04,281 INFO  ~ directory : default
+23:27:16,216 INFO  ~ directory : innerboard
+23:27:16,216 INFO  ~ directory : pixel-cookers
+23:27:16,216 INFO  ~ directory : classic
+23:27:16,217 INFO  ~ directory : alternate
+23:27:16,217 INFO  ~ directory : default
+23:27:27,624 INFO  ~ directory : innerboard
+23:27:27,624 INFO  ~ directory : pixel-cookers
+23:27:27,624 INFO  ~ directory : classic
+23:27:27,624 INFO  ~ directory : alternate
+23:27:27,624 INFO  ~ directory : default
+23:30:47,110 INFO  ~ directory : innerboard
+23:30:47,110 INFO  ~ directory : pixel-cookers
+23:30:47,110 INFO  ~ directory : classic
+23:30:47,110 INFO  ~ directory : alternate
+23:30:47,110 INFO  ~ directory : default
+00:15:38,572 ERROR ~ 
+
+@68p6l289m
+Internal Server Error (500) for request GET /admin
+
+Compilation error (In /app/controllers/Projects.java around line 40)
+The file /app/controllers/Projects.java could not be compiled. Error raised is : parentId cannot be resolved to a variable
+
+play.exceptions.CompilationException: parentId cannot be resolved to a variable
+	at play.classloading.ApplicationCompiler$2.acceptResult(ApplicationCompiler.java:246)
+	at org.eclipse.jdt.internal.compiler.Compiler.handleInternalException(Compiler.java:676)
+	at org.eclipse.jdt.internal.compiler.Compiler.compile(Compiler.java:520)
+	at play.classloading.ApplicationCompiler.compile(ApplicationCompiler.java:282)
+	at play.classloading.ApplicationClasses$ApplicationClass.compile(ApplicationClasses.java:277)
+	at play.classloading.ApplicationClassloader.detectChanges(ApplicationClassloader.java:322)
+	at play.Play.detectChanges(Play.java:614)
+	at play.Invoker$Invocation.init(Invoker.java:198)
+	at Invocation.HTTP Request(Play!)
+00:15:52,985 WARN  ~ Messages file missing for locale en
+00:21:42,975 ERROR ~ 
+
+@68p6l28be
+Internal Server Error (500) for request GET /admin/projects/omtfcore
+
+Template compilation error (In /app/views/Projects/edit.html around line 76)
+The template /app/views/Projects/edit.html does not compile : unexpected token: value 
+
+play.exceptions.TemplateCompilationException: unexpected token: value 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:174)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:195)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Projects.edit(Projects.java:30)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+00:21:55,060 ERROR ~ 
+
+@68p6l28bf
+Internal Server Error (500) for request GET /admin/projects/omtfcore
+
+Template compilation error (In /app/views/Projects/edit.html around line 76)
+The template /app/views/Projects/edit.html does not compile : unexpected token: } 
+
+play.exceptions.TemplateCompilationException: unexpected token: } 
+	at play.templates.GroovyTemplate.compile(GroovyTemplate.java:174)
+	at play.templates.GroovyTemplate.internalRender(GroovyTemplate.java:195)
+	at play.templates.Template.render(Template.java:26)
+	at play.templates.GroovyTemplate.render(GroovyTemplate.java:187)
+	at play.mvc.results.RenderTemplate.<init>(RenderTemplate.java:24)
+	at play.mvc.Controller.renderTemplate(Controller.java:660)
+	at play.mvc.Controller.renderTemplate(Controller.java:640)
+	at play.mvc.Controller.render(Controller.java:695)
+	at controllers.Projects.edit(Projects.java:30)
+	at play.mvc.ActionInvoker.invokeWithContinuation(ActionInvoker.java:548)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:502)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:478)
+	at play.mvc.ActionInvoker.invokeControllerMethod(ActionInvoker.java:473)
+	at play.mvc.ActionInvoker.invoke(ActionInvoker.java:161)
+	at Invocation.HTTP Request(Play!)
+00:29:19,067 WARN  ~ Messages file missing for locale en
+00:30:21,525 WARN  ~ Messages file missing for locale en

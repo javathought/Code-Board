@@ -30,19 +30,13 @@ public class Projects extends Admin {
 		render(project, projects);
 	}
 	
-	public static void save(Long parentId, @Valid Project project) {
+	public static void save(@Valid Project project) {
 		if (Project.count("identifier = ? and id <> ?", project.identifier, project.id) > 0) {
 			validation.addError("identifier", "validation.unique");
 			List<Project> projects = Project.findAll();
 			params.flash();
 			render("@edit", project, projects); 
 		}
-        if (parentId == null) {
-    		project.parent = null;
-        } else {
-        	Project parent = Project.findById(parentId);
-        	project.parent = parent;
-        }
         if (project.id == null) {
         	project.created = Calendar.getInstance().getTime();
         }

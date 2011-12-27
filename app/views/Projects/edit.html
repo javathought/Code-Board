@@ -26,6 +26,8 @@
 <div class="nosidebar" id="main">
 
     <div id="sidebar">        
+       	<h3>&{'administration'}</h3>
+		#{admin-menu /}      
     </div>
     
 	<div id="content">
@@ -44,7 +46,7 @@
 	 			</ul></div>
 	 		#{/ifErrors}
 	
-			#{form @Projects.save(parentId), id:'form', method:'POST', enctype:'multipart/form-data'}
+			#{form @Projects.save(), id:'form', method:'POST', enctype:'multipart/form-data'}
 		<div class="box tabular">
 				<input type="hidden" name="project.id" id="id" value="${project?.id}" />
 				
@@ -53,7 +55,7 @@
 				</p>
 
 			    <p><label for="project_parent_id">&{'parent'}</label>
-					#{select 'parentId', items:projects, valueProperty:'id', labelProperty:'name', id:'id', value:"${project?.parent?.id}" } 
+					#{select 'project.parent.id', items:projects, valueProperty:'id', labelProperty:'name', id:'id', value:"${project?.parent?.id}" } 
 					<option> </option>
 					#{/select}
 				    </p>
@@ -67,7 +69,15 @@
 				</script>
 				
 				<p><label for="project_identifier">&{'identifier'}<span class="required"> *</span></label>
-					<input id="project_identifier" name="project.identifier" size="60" type="text" value="${project?.identifier}"" />
+					<input id="project_identifier" name="project.identifier" size="60" type="text" value="${project?.identifier}" />
+				</p>
+				
+				<p><label for="project_textformat">&{'textformat'}</label>
+				#{select 'project.textformat', value:"${project?.textformat}" }
+					#{option }#{/option}
+					#{option value="textile"}textile#{/option}
+					#{option value="markdown"}markdown#{/option}
+				#{/select}
 				</p>
 	
 		</div>

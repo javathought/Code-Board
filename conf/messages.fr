@@ -26,6 +26,9 @@ up = Remonter
 down = Descendre
 to_bottom = Descendre en dernier
  
+#
+textformat = Formatage du texte
+
 # *** main.html
 login = Connexion
 logout = Déconnexion
@@ -130,4 +133,6 @@ theme = Thème
 #Validation message
 validation.required=%s est obligatoire
 validation.object = Merci de corriger les erreur ci-dessus ;)
+validation.unique=%s doit être unique
+
 
