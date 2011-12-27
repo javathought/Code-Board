@@ -14,6 +14,10 @@ import play.vfs.VirtualFile;
 
 public class Settings extends Admin {
 
+	public static void index() {
+		render();
+	}
+	
 	public static void settings() {
 		Configuration setting = Configuration.find("byType", "General").first();
 		List<String> themes = Configuration.getThemes();
@@ -24,23 +28,8 @@ public class Settings extends Admin {
 		setting.save();
 		List<String> themes = Configuration.getThemes();
 		
-		VirtualFile vf = VirtualFile.fromRelativePath("/app/views/tags/theme.html");
-		File realFile = vf.getRealFile();
-		try {
-			FileWriter fr = new FileWriter(realFile);
-			fr.write(
-					"<link rel=\"stylesheet\" media=\"screen\" href=\"/public/themes/"
-					+
-					setting.look
-					+
-					"/stylesheets/application.css\">"
-					);
-			fr.close();
-		} catch (IOException e) {
-			// TODO Auto-generated catch block
-//			Logger.info("file")
-		}
-		
 		render("@settings", setting, themes);
 	}
+	
+	
 }

@@ -9,6 +9,7 @@ import java.util.Map;
 import ext.MarkdownExtensions;
 import ext.TextileExtension;
 
+import models.Configuration;
 import models.Enumeration;
 import models.Issue;
 import models.Project;
@@ -22,12 +23,6 @@ import play.mvc.Before;
 
 public class Application extends Main {
 	
-//	private static class TrackerSummary {
-//		public String trackerType;
-//		public long sum;
-//		public long opened;
-//	}
-
     @Before
     static void setConnectedUser() {
         if(Security.isConnected()){
@@ -41,8 +36,9 @@ public class Application extends Main {
     }
 	
     public static void index() {
-        List<Project> projects = Project.all().fetch();
-        render(projects);	
+        List<Project> projects = Project.all().fetch(5);
+		Configuration setting = Configuration.find("byType", "General").first();
+        render(projects, setting);	
 
 //        render();
     }
@@ -114,9 +110,7 @@ public class Application extends Main {
 	        issue.assignee = assignee;
         }
         issue.updated = Calendar.getInstance().getTime();
-        
-
-        
+             
         issue.save();
         
         issues(project.identifier);

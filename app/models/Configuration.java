@@ -8,6 +8,7 @@ import java.util.List;
 import javax.persistence.Entity;
 
 import play.Logger;
+import play.data.validation.MaxSize;
 import play.db.jpa.Model;
 
 @Entity
@@ -16,6 +17,8 @@ public class Configuration extends Model {
 
 	public String type;
 	public String look;
+	@MaxSize(2000)
+	public String welcome_text;
 	
 	public static String getTheme () {
 		Configuration set = find("byType", "General").first();

@@ -4,6 +4,12 @@
 application.title = Code Board
 parent = Sunproject of
 isPublic = Public 
+date_format = yyyy-MM-dd
+sort = Sort
+are_you_sure = Are you sure ?
+error_on_operation = Error on operation
+name = Name
+delete = Delete
 
 # *** main.html
 login = Login
@@ -45,6 +51,13 @@ latest_projects = Latest projects
 overview = Overview
 overview_issue_tracking = Issue tracking
 view_all_issues = View all issues
+parent = Sous-projet de
+identifier = Identifier
+
+project_name = Project
+project_public = Public
+project_created = Created
+new_project = New project
 
 # *** issue.html
 issue = Issue
@@ -71,9 +84,21 @@ documents = Documents
 wiki = Wiki
 files = File
 
+# *** Trackers
+trackers = Trackers
+tracker_name = Tracker
+new_tracker = New tracker
+tracker_deleted = Tracker deleted
+tracker_moved = Tracker moved
+
 # *** Settings
 settings = Settings
 connect = Login
+issue_statuses = Issue statuses
+enumerations = Enumerations
+default= Default
+active = Active
+new_enumeration = New enumeration
 
 #Validation message
 validation.object = Please correct the error(s)
@@ -98,4 +123,5 @@ validation.url=Not a valid URL
 validation.phone=Not a valid phone
 validation.ipv4=Not a valid IP address
 validation.ipv6=Not a valid IP v6 address
-
+validation.unique=%s must be unique
+	

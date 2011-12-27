@@ -12,8 +12,19 @@ since.years   = il y a %s année%s
 since.format  = d MMM yyyy
 
 application.title = Code Board
-parent = Sunproject of
 isPublic = Public
+date_format = dd/MM/yyyy
+sort = Trier
+are_you_sure = Êtes-vous sûr ?
+error_on_operation = Error on operation
+name = Nom
+delete = Supprimer
+
+#
+to_top = Remonter en premier
+up = Remonter
+down = Descendre
+to_bottom = Descendre en dernier
  
 # *** main.html
 login = Connexion
@@ -56,6 +67,13 @@ latest_projects = Derniers projets
 overview = Aperçu
 overview_issue_tracking = Suivi des demandes
 view_all_issues = Voir toutes les demandes
+parent = Sous-projet de
+identifier = Identifiant
+
+project_name = Projet
+project_public = Public
+project_created = Créé le
+new_project = Nouveau projet
 
 # *** issue.html
 issue = Demande
@@ -73,6 +91,13 @@ project = Projet
 issues_affected = Demandes qui me sont assignées
 attributes = Attributs
 
+# States
+percent_done = %% réalisé
+closed = Demande fermée
+new_state = Nouveau statut
+
+#
+
 activity = Activité
 calendar = Calendrier
 news = Nouvelles
@@ -82,9 +107,25 @@ files = Fichiers
 
 create = Créer
 
+# *** Trackers
+trackers = Trackers
+tracker_name = Tracker
+tracker.name = Nom
+new_tracker = Nouveau tracker
+tracker_deleted = Tracker supprimé
+tracker_moved = Tracker déplacé
+
+
 # *** Settings
 settings = Configuration
 connect = Connexion
+issue_statuses = Statuts de demandes
+enumerations = Listes de valeurs
+default= Valeur par défaut
+active = Actif
+new_enumeration = Nouvelle valeur
+enumeration_moved = Valeur déplacée
+theme = Thème
 
 #Validation message
 validation.required=%s est obligatoire

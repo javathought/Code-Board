@@ -1,0 +1,84 @@
+#{extends 'main.html' /}
+#{set 'moreScripts'}
+        #{script 'markitup/jquery.markitup.js' /}
+        <script src="/public/javascripts/markitup/sets/textile/set.js" type="text/javascript" charset="${_response_encoding}"></script>
+#{/set}
+#{set 'moreStyles'}
+        #{stylesheet 'markitup/skins/simple/style.css' /}
+        <link rel="stylesheet" media="screen" href="/public/stylesheets/markitup/sets/textile/style.css">   
+        #{stylesheet 'bootstrap.css' /}
+#{/set}
+
+#{set 'title'}&{'application.title'} » #{if tracker?.id}&{'projects'} » ${project.name} #{/if}
+		#{else}
+		&{'new_project'}
+		#{/else}#{/set}
+
+
+<div id="header">
+	<h1>&{'projects'}</h1>
+	<div id="main-menu">
+	</div>
+	
+</div>
+
+
+<div class="nosidebar" id="main">
+
+    <div id="sidebar">        
+    </div>
+    
+	<div id="content">
+
+			#{if enumeration?.id}
+			<h2><a href="/admin/enumerations">&{'enumerations'}</a> » ${enumeration.name}</h2>
+			#{/if}
+			#{else}
+			<h2>&{'new_enumeration'}</h2>
+			#{/else}
+			
+			#{ifErrors}
+		 		<div class="errorExplanation" id="errorExplanation">
+		 		<ul>
+			   #{errors}<li>${error}</li>#{/errors}
+	 			</ul></div>
+	 		#{/ifErrors}
+	
+			#{form @Enumerations.save(is_active, is_default), id:'form', method:'POST', enctype:'multipart/form-data'}
+		<div class="box tabular">
+				<input type="hidden" name="enumeration.id" id="id" value="${enumeration?.id}" />
+				#{if enumeration?.id}
+					<input type="hidden" name="enumeration.type" id="type" value="${enumeration?.type}" />
+				#{/if}
+				#{else}
+					<input type="hidden" name="enumeration.type" id="type" value="${type}" />
+				#{/else}
+				
+				<p><label for="enumeration_name">&{'name'}<span class="required"> *</span></label>
+					<input id="enumeration.name" name="enumeration.name" size="60" type="text" value="${enumeration?.name}" />
+				</p>
+				
+				<p><label for="enumeration_active">&{'active'}</label>
+					<input #{if enumeration?.active }checked#{/if} id="enumeration.active" name="is_active" type="checkbox"  />
+				</p>
+
+				<p><label for="enumeration_is_default">Valeur par défaut</label>
+					<input #{if enumeration?.is_default}checked#{/if} id="enumeration.is_default" name="is_default" type="checkbox" />
+				</p>
+
+		</div>
+		<input id="commit" name="commit" type="submit" 
+				#{if enumeration?.id}
+				value="&{'save'}" 
+				#{/if}
+				#{else}
+				value="&{'create'}" 
+				#{/else}
+			/>
+		
+			#{/form}
+        <div style="clear:both;"></div>
+    </div>
+		
+
+</div>

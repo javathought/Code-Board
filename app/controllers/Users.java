@@ -29,7 +29,6 @@ public class Users extends Main {
 		render(user);
 	}
 	
-//	@Check("admin")
 	public static void list() {
 		List<User> users = User.find("login != 'root' ").fetch();
 		render(users);

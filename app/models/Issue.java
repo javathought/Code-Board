@@ -5,6 +5,9 @@ import java.util.Date;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
 
+import org.hibernate.annotations.OnDelete;
+import org.hibernate.annotations.OnDeleteAction;
+
 import play.data.validation.Required;
 import play.db.jpa.Model;
 
@@ -13,6 +16,7 @@ public class Issue extends Model {
 	
 //	@Required
 	@ManyToOne
+	@OnDelete(action=OnDeleteAction.CASCADE)
 	public Project project;
 //	@Required
 	@ManyToOne

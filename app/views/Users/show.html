@@ -12,13 +12,20 @@
 	
 </div>
 
-
+#{if user?.admin }
+<div class="" id="main">
+#{/if}
+#{else}
 <div class="nosidebar" id="main">
+#{/else}
 
     <div id="sidebar">        
-        
+#{if user?.admin }
+            <h3>&{'administration'}</h3>
+			#{admin-menu /}
+#{/if}
+
     </div>
-    
 	<div id="content">    
 
 		#{if user?.id}
