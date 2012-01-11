@@ -1,0 +1,130 @@
+<script language="javascript">
+
+	$("a.delete").click(function(event) {
+		event.preventDefault();   
+		if (confirm("&{'are_you_sure'}")) { 
+        	$.ajax({
+	        	type: "DELETE",
+	        	url: this.href, 
+	        	async: false,
+	        	success: function(data, textStatus, jqXHR) { 
+	        		if (data[0] == 1) {
+	 	       			$('#action-'+data[2]).remove();
+	 	       		} else {
+		    		$('<div/>', {
+		    			id: 'foo',
+		    			class: 'alert-message error',
+		    			html: '<strong>&{"error_on_operation"}</strong> '+ data[1]  
+						}).appendTo('#status').delay(3000).fadeOut();	 	       			
+	 	       		}  
+       			},
+	        	error: function(xhr, ajaxOptions, thrownError) {
+		    		$('<div/>', {
+		    			id: 'foo',
+		    			class: 'alert-message error',
+		    			html: '<strong>&{"error_on_operation"}</strong> '+ xhr.status + '-' + thrownError 
+						}).appendTo('#status').delay(1500).fadeOut();
+				}       		
+	        });
+	    }       
+ 		return true;
+    });
+
+
+	$("a.highest").click(function(event) {
+		event.preventDefault();   
+		if ( $("tr").index($(this).parent().parent()) != 1 ) {
+        	$.ajax({
+	        	type: "POST",
+	        	url: this.href, 
+	        	async: false,
+	        	success: function(data, textStatus, jqXHR) { 
+	        		table=$('#action-'+data[1]).parent();
+	        		table.find('tr').eq(0).before($('#action-'+data[1]));
+       			},
+	        	error: function(xhr, ajaxOptions, thrownError) {
+	        	
+		    		$('<div/>', {
+		    			id: 'foo',
+		    			class: 'alert-message error',
+		    			html: '<strong>&{"error_on_operation"}</strong> '+ xhr.status + '-' + thrownError 
+						}).appendTo('#status').delay(1500).fadeOut();
+				}       		
+	        });
+	    }
+ 		return true;
+    });
+
+	$("a.lowest").click(function(event) {
+		event.preventDefault();   
+		if ( $("tr").index($(this).parent().parent()) != $("table#actions tbody tr").length ) {
+        	$.ajax({
+	        	type: "POST",
+	        	url: this.href, 
+	        	async: false,
+	        	success: function(data, textStatus, jqXHR) { 
+	        		table=$('#action-'+data[1]).parent();
+	        		table.find('tr').eq($("table#actions tbody tr").length - 1).after($('#action-'+data[1]));
+       			},
+	        	error: function(xhr, ajaxOptions, thrownError) {
+	        	
+		    		$('<div/>', {
+		    			id: 'foo',
+		    			class: 'alert-message error',
+		    			html: '<strong>&{"error_on_operation"}</strong> '+ xhr.status + '-' + thrownError 
+						}).appendTo('#status').delay(1500).fadeOut();
+				}       		
+	        });
+	    }
+ 		return true;
+    });
+
+	$("a.higher").click(function(event) {
+		event.preventDefault();   
+		if ( $("tr").index($(this).parent().parent()) != 1 ) {
+        	$.ajax({
+	        	type: "POST",
+	        	url: this.href, 
+	        	async: false,
+	        	success: function(data, textStatus, jqXHR) { 
+	        		table=$('#action-'+data[1]).parent();
+	        		table.find('tr').eq(data[2]-1).before($('#action-'+data[1]));
+       			},
+	        	error: function(xhr, ajaxOptions, thrownError) {
+	        	
+		    		$('<div/>', {
+		    			id: 'foo',
+		    			class: 'alert-message error',
+		    			html: '<strong>&{"error_on_operation"}</strong> '+ xhr.status + '-' + thrownError 
+						}).appendTo('#status').delay(1500).fadeOut();
+				}       		
+	        });
+	    }
+ 		return true;
+    });
+
+	$("a.lower").click(function(event) {
+		event.preventDefault();   
+		if ( $("tr").index($(this).parent().parent()) != $("table#actions tbody tr").length ) {
+        	$.ajax({
+	        	type: "POST",
+	        	url: this.href, 
+	        	async: false,
+	        	success: function(data, textStatus, jqXHR) { 
+	        		table=$('#action-'+data[1]).parent();
+	        		table.find('tr').eq(data[2]-1).after($('#action-'+data[1]));
+       			},
+	        	error: function(xhr, ajaxOptions, thrownError) {
+	        	
+		    		$('<div/>', {
+		    			id: 'foo',
+		    			class: 'alert-message error',
+		    			html: '<strong>&{"error_on_operation"}</strong> '+ xhr.status + '-' + thrownError 
+						}).appendTo('#status').delay(1500).fadeOut();
+				}       		
+	        });
+	    }
+ 		return true;
+    });
+
+</script>

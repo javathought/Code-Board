@@ -15,7 +15,9 @@ public class User extends Model {
     
 	@Required
 	public String login;
+	@Required
 	public String firstname;
+	@Required
 	public String lastname;
 	@Email
 	@Required

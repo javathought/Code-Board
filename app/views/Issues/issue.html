@@ -1,13 +1,13 @@
 #{extends 'main.html' /}
 #{set 'moreScripts'}
         #{script 'markitup/jquery.markitup.js' /}
-        <script src="/public/javascripts/markitup/sets/${project?.textformat}/set.js" type="text/javascript" charset="${_response_encoding}"></script>
+        <script src="/public/javascripts/markitup/sets/${issue?.project?.textformat}/set.js" type="text/javascript" charset="${_response_encoding}"></script>
 #{/set}
 #{set 'moreStyles'}
         #{stylesheet 'markitup/skins/simple/style.css' /}
-        <link rel="stylesheet" media="screen" href="/public/stylesheets/markitup/sets/${project?.textformat}/style.css">      
+        <link rel="stylesheet" media="screen" href="/public/stylesheets/markitup/sets/${issue.project?.textformat}/style.css">      
 #{/set}
-#{set 'title'}${project?.name} » &{'issue'} #${issue?.id} #{/set}
+#{set 'title'}${issue?.project?.name} » &{'issue'} #${issue?.id} #{/set}
 
 #{if issue?.id}
 	#{set issuesSelected:'selected' /}
@@ -17,9 +17,9 @@
 #{/else}
 
 <div id="header">
-	<h1>${project?.name}</h1>
+	<h1>${issue?.project?.name}</h1>
 	<div id="main-menu">
-				#{main-menu project:project /}		
+				#{main-menu project:issue?.project /}		
 	</div>
 	
 </div>
@@ -41,10 +41,10 @@
 			
 			<span id="watcher"><a class="icon icon-fav-off" href="/redmine/watchers/watch?object_id=41&amp;object_type=issue&amp;replace%5B%5D=watcher&amp;replace%5B%5D=watcher2" onclick="new Ajax.Request('/redmine/watchers/watch?object_id=41&amp;object_type=issue&amp;replace%5B%5D=watcher&amp;replace%5B%5D=watcher2', {asynchronous:true, evalScripts:true, parameters:'authenticity_token=' + encodeURIComponent('LLyjDadSkVqlYwYElfnkvwETfWMK8AkJherOKzh0zik=')}); return false;">Surveiller</a></span>
 			
-			<a href="/redmine/projects/codeboard/issues/41/copy" class="icon icon-duplicate">Dupliquer</a>
-			<a href="/redmine/issue_moves/new/41?copy_options%5Bcopy%5D=t" class="icon icon-copy">Copier</a>
-			<a href="/redmine/issue_moves/new/41" class="icon icon-move">Déplacer</a>
-			<a href="/redmine/issues/41/destroy" class="icon icon-del" onclick="if (confirm('Êtes-vous sûr ?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'LLyjDadSkVqlYwYElfnkvwETfWMK8AkJherOKzh0zik='); f.appendChild(s);f.submit(); };return false;">Supprimer</a -->
+			<a href="/admin/projects/codeboard/issues/41/copy" class="icon icon-duplicate">Dupliquer</a>
+			<a href="/admin/issue_moves/new/41?copy_options%5Bcopy%5D=t" class="icon icon-copy">Copier</a>
+			<a href="/admin/issue_moves/new/41" class="icon icon-move">Déplacer</a>
+			<a href="/admin/issues/41/destroy" class="icon icon-del" onclick="if (confirm('Êtes-vous sûr ?')) { var f = document.createElement('form'); f.style.display = 'none'; this.parentNode.appendChild(f); f.method = 'POST'; f.action = this.href;var s = document.createElement('input'); s.setAttribute('type', 'hidden'); s.setAttribute('name', 'authenticity_token'); s.setAttribute('value', 'LLyjDadSkVqlYwYElfnkvwETfWMK8AkJherOKzh0zik='); f.appendChild(s);f.submit(); };return false;">Supprimer</a -->
 		#{/if}
 		</div>
 
@@ -67,10 +67,10 @@
 			    <p>
 				    <!-- div style=" border-style: dotted; border-width: 1px; padding: 5px;" -->
 				    <div class="wiki" >
-				    #{if project.textformat == 'textile'}
+				    #{if issue?.project.textformat == 'textile'}
 			    	${issue?.description.textile().raw()}
 			    	#{/if}
-			    	#{elseif project.textformat == 'markdown'}
+			    	#{elseif issue?.project.textformat == 'markdown'}
 			    	${issue?.description.markdown().raw()}			    	
 			    	#{/elseif}
 			    	#{else}
@@ -107,19 +107,19 @@
    			#{/errors}
  			</ul></div>
 		#{/ifErrors}
-		#{form @Issues.saveIssue(project.id, trackerId, assigneeId), id:'form', class:'tabular', method:'POST', enctype:'multipart/form-data'}
+		#{form @Issues.saveIssue(), id:'form', class:'tabular', method:'POST', enctype:'multipart/form-data'}
 			<div id="update" #{if issue?.id} #{ifErrors}#{/ifErrors}#{else}style="display:none;"#{/else} #{/if} >
 				<div class="box">
 	 				<input type="hidden" name="issue.id" id="id" value="${issue?.id}" />
-				    <!-- input style="visibility:hidden"  type="text" name="issue.project" id="project" value="${project.identifier}"/ -->
+				    <input style="visibility:hidden"  type="text" name="issue.project.id" id="project" value="${issue?.project.id}" />
 	
 					<p><label for="issue_tracker_id">&{'tracker'}<span class="required"> *</span></label>
-						#{select 'trackerId', items:trackers, valueProperty:'id', labelProperty:'name', id:'id', value:"${issue?.tracker?.id}" /}
+						#{select 'issue.tracker.id', items:trackers, valueProperty:'id', labelProperty:'name', id:'id', value:"${issue?.tracker?.id}" /}
 					</p>
-	
+
 					<p class="field">
-					    <label for="subject">&{'subject'}<span class="required"> *</span></label>
-					    <input type="text" name="issue.subject" id="issue_subject" size="80" value="${issue?.subject}"/>
+					    <label for="subject">&{'subject'}<span class="required"> *</span></label>					    
+					    #{input for:'issue.subject', type:'text', id:"issue_subject", value:issue?.subject /}
 					    <!-- span class="error" >${errors.forKey('issue.subject')}</span -->
 					</p>
 	
@@ -131,10 +131,10 @@
 	
 
 						<script language="javascript">
-				    #{if project.textformat == 'textile'}
+				    #{if issue?.project.textformat == 'textile'}
     $('#description').markItUp(textileSettings);
 			    	#{/if}
-			    	#{elseif project.textformat == 'markdown'}
+			    	#{elseif issue?.project.textformat == 'markdown'}
     $('#description').markItUp(markdownSettings);
 			    	
 			    	#{/elseif}
@@ -146,22 +146,16 @@
 					<div class="splitcontentleft">
 			
 						<p><label for="issue_state">&{'state'}<span class="required"> *</span></label>
-							#{select 'stateId', items:states, valueProperty:'id', labelProperty:'name', id:'state', value:"${issue?.state?.id}" /}
+							#{select 'issue.state.id', items:states, valueProperty:'id', labelProperty:'name', id:'state', value:"${issue.state.id}" /}
 						</p>
 						<p><label for="issue_priority">&{'priority'}<span class="required"> *</span></label>
-							#{if issue?.priority?.id}
-							#{select 'priorityId', items:priorities, valueProperty:'name', labelProperty:'name', id:'priority', value:"${issue?.priority?.name}" /}
-							#{/if}
-							#{else}
-							#{select 'priorityId', items:priorities, valueProperty:'name', labelProperty:'name', id:'priority', value:'Normal' /}
-							#{/else}
+							#{select 'issue.priority.id', items:priorities, valueProperty:'id', labelProperty:'name', id:'priority', value:"${issue?.priority?.id}" /}
 						</p>
-		
 					</div>
 		
 					<div class="splitcontentright">					
 						<p><label for="issue_assignee">&{'assignee'}</label>
-							#{select 'assigneeId', items:users, valueProperty:'id', id:'assignee', value:"${issue?.assignee?.id}" }
+							#{select 'issue.assignee.id', items:users, valueProperty:'id', id:'assignee', value:"${issue?.assignee?.id}" }
 							<option> </option>
 							#{/select}
 						</p>

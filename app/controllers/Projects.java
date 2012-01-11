@@ -15,7 +15,7 @@ import play.mvc.With;
 public class Projects extends Admin {
 	
 	public static void list() {
-		List<Project> projects = Project.findAll();
+		List<Project> projects = Project.find("order by created desc").fetch();
 		render(projects);
 	}
 

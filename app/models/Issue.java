@@ -34,6 +34,12 @@ public class Issue extends Model {
 //	@Required
 	@ManyToOne
 	public Enumeration priority;
+	
+	public Issue(Project project) {
+		this.project = project;
+		this.state = State.find("isDefault = ?", true).first();
+		this.priority = Enumeration.find("type = ? and is_default = ?", Enumeration.ISSUE_PRIORITY_TYPE, true).first();
+	}
 
     
 }

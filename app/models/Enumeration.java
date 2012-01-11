@@ -1,10 +1,8 @@
 package models;
 
-import play.*;
-import play.db.jpa.*;
+import javax.persistence.Entity;
 
-import javax.persistence.*;
-import java.util.*;
+import play.db.jpa.Model;
 
 @Entity
 public class Enumeration extends Model {

@@ -25,6 +25,7 @@ public class Project extends Model {
 	@ManyToOne(optional=true)
 	public Project parent;
 	public String description;
+	@Required
 	public String identifier;
 	public String homepage;
 	public Boolean isPublic;

@@ -48,12 +48,12 @@
 						<tr id="action-${priority.id}" class="hascontextmenu">
 							<td class="project"><a href="/admin/enumerations/${priority.id}">${priority.name}</a></td>
 					        <td class="checkbox hide-when-print" align="center">
-					        #{if priority.active }
+					        #{if priority.is_default }
 					        <img alt="Toggle_check" src="@{'/public/images/toggle_check.png'}" />
 					        #{/if} 
 					        </td>
 					        <td class="checkbox hide-when-print" align="center">
-					        #{if priority.is_default }
+					        #{if priority.active }
 					        <img alt="Toggle_check" src="@{'/public/images/toggle_check.png'}" />
 					        #{/if} 
 					        </td>
@@ -85,5 +85,5 @@
 	</div>
 </div>
 
-#{list_actions /}
+#{list-actions /}
 
