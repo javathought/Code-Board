@@ -6,6 +6,10 @@ import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import ext.MarkdownExtensions;
+import ext.TextileExtension;
+
+import models.Configuration;
 import models.Enumeration;
 import models.Issue;
 import models.Project;
@@ -19,12 +23,6 @@ import play.mvc.Before;
 
 public class Application extends Main {
 	
-//	private static class TrackerSummary {
-//		public String trackerType;
-//		public long sum;
-//		public long opened;
-//	}
-
     @Before
     static void setConnectedUser() {
         if(Security.isConnected()){
@@ -38,8 +36,9 @@ public class Application extends Main {
     }
 	
     public static void index() {
-        List<Project> projects = Project.all().fetch();
-        render(projects);	
+        List<Project> projects = Project.all().fetch(5);
+		Configuration setting = Configuration.find("byType", "General").first();
+        render(projects, setting);	
 
 //        render();
     }
@@ -89,9 +88,14 @@ public class Application extends Main {
     
     public static void saveIssue(Long projectId, Long trackerId, Long assigneeId, Long stateId, String priorityId, @Valid Issue issue) {
         Project project = Project.findById(projectId);
-    	List<Tracker> trackers = Tracker.find("order by position asc").fetch();
         if (Validation.hasErrors()) {
-            render("@issue", issue, project, trackers);            
+        	List<Tracker> trackers = Tracker.find("order by position asc").fetch();
+    		List<User> users = User.find("login <> 'root' order by login").fetch();
+    		List<State> states = State.find("order by position").fetch();
+        	List<Enumeration> priorities = Enumeration.find("byType", "IssuePriority").fetch();
+            params.flash(); // add http parameters to the flash scope
+//            validation.keep(); // keep the errors for the next request
+            render("@issue", issue, project, trackers, users, states, priorities);            
         }
         Logger.info("assignee = %s", issue.assignee);
         Tracker tracker = Tracker.findById(trackerId);
@@ -106,7 +110,7 @@ public class Application extends Main {
 	        issue.assignee = assignee;
         }
         issue.updated = Calendar.getInstance().getTime();
-        
+             
         issue.save();
         
         issues(project.identifier);
@@ -124,5 +128,15 @@ public class Application extends Main {
     	render(issue, project, trackers, users, states, priorities);
     	}
     
+    public static void textile(String data) {
+    	renderText(TextileExtension.textile(data));
+    	
+    }
+
+    public static void markdown(String data) {
+    	renderText(MarkdownExtensions.markdown(data));
+    	
+    }
+
     
 }

@@ -1,16 +1,16 @@
 package models;
 
-import play.*;
-import play.db.jpa.*;
+import javax.persistence.Entity;
 
-import javax.persistence.*;
-import java.util.*;
+import play.db.jpa.Model;
 
 @Entity
 public class Enumeration extends Model {
 	
+	public static final String ISSUE_PRIORITY_TYPE = "IssuePriority";
+
 	public String name;
-	public int position;
+	public long position;
 	public Boolean is_default;
 	public String type;
 	public Boolean active;

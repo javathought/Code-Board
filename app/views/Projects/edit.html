@@ -1,0 +1,98 @@
+#{extends 'main.html' /}
+#{set 'moreScripts'}
+        #{script 'markitup/jquery.markitup.js' /}
+        <script src="/public/javascripts/markitup/sets/textile/set.js" type="text/javascript" charset="${_response_encoding}"></script>
+#{/set}
+#{set 'moreStyles'}
+        #{stylesheet 'markitup/skins/simple/style.css' /}
+        <link rel="stylesheet" media="screen" href="/public/stylesheets/markitup/sets/textile/style.css">   
+        #{stylesheet 'bootstrap.css' /}
+#{/set}
+
+#{set 'title'}&{'application.title'} » #{if tracker?.id}&{'projects'} » ${project.name} #{/if}
+		#{else}
+		&{'new_project'}
+		#{/else}#{/set}
+
+
+<div id="header">
+	<h1>&{'projects'}</h1>
+	<div id="main-menu">
+	</div>
+	
+</div>
+
+
+<div class="nosidebar" id="main">
+
+    <div id="sidebar">        
+       	<h3>&{'administration'}</h3>
+		#{admin-menu /}      
+    </div>
+    
+	<div id="content">
+
+			#{if project?.id}
+			<h2><a href="/admin/projects">&{'projects'}</a> » ${project.name}</h2>
+			#{/if}
+			#{else}
+			<h2>&{'new_project'}</h2>
+			#{/else}
+			
+			#{ifErrors}
+		 		<div class="errorExplanation" id="errorExplanation">
+		 		<ul>
+			   #{errors}<li>${error}</li>#{/errors}
+	 			</ul></div>
+	 		#{/ifErrors}
+	
+			#{form @Projects.save(), id:'form', method:'POST', enctype:'multipart/form-data'}
+		<div class="box tabular">
+				<input type="hidden" name="project.id" id="id" value="${project?.id}" />
+				
+				<p><label for="project_name">&{'name'}<span class="required"> *</span></label>
+					#{input for:'project.name', type:'text', id:"project_name", value:project?.name /}
+				</p>
+
+			    <p><label for="project_parent_id">&{'parent'}</label>
+					#{select 'project.parent.id', items:projects, valueProperty:'id', labelProperty:'name', id:'id', value:"${project?.parent?.id}" } 
+					<option> </option>
+					#{/select}
+				    </p>
+	
+				<p><label for="project_description">&{'description'}</label>
+					<textarea id="description" name="project.description." class="textile" style="resize: none;" >${project?.description}</textarea>
+				</p>
+				
+				<script language="javascript">
+				    $('#description').markItUp(textileSettings);
+				</script>
+				
+				<p><label for="project_identifier">&{'identifier'}<span class="required"> *</span></label>
+					#{input for:'project.identifier', type:'text', id:"project_identifier", value:project?.identifier /}
+				</p>
+				
+				<p><label for="project_textformat">&{'textformat'}</label>
+				#{select 'project.textformat', value:"${project?.textformat}" }
+					#{option }#{/option}
+					#{option value="textile"}textile#{/option}
+					#{option value="markdown"}markdown#{/option}
+				#{/select}
+				</p>
+	
+		</div>
+		<input id="commit" name="commit" type="submit" 
+				#{if project?.id}
+				value="&{'save'}" 
+				#{/if}
+				#{else}
+				value="&{'create'}" 
+				#{/else}
+			/>
+		
+			#{/form}
+        <div style="clear:both;"></div>
+    </div>
+		
+
+</div>

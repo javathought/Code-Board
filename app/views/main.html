@@ -4,7 +4,8 @@
     <head>
         <title>#{get 'title' /}</title>
         <meta charset="${_response_encoding}">
-        <link rel="stylesheet" media="screen" href="/public/themes/${theme}/stylesheets/application.css">
+        
+        <link rel="stylesheet" media="screen" href="/public/themes/#{theme /}/stylesheets/application.css">
         #{get 'moreStyles' /}
         <link rel="shortcut icon" type="image/png" href="@{'/public/images/favicon.png'}">
         <script src="@{'/public/javascripts/jquery-1.5.2.min.js'}" type="text/javascript" charset="${_response_encoding}"></script>
@@ -37,7 +38,6 @@
 			<!-- li><a href="/projects" class="projects">&{'projects'}</a></li -->
 			#{secure.check 'admin'}
 			<li><a href="/admin" class="administration">&{'administration'}</a></li>
-			<li><a href="/admin/settings" class="administration">&{'settings'}</a></li>
 		    #{/secure.check}
 			    
      	</div>

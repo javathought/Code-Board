@@ -1,7 +1,8 @@
 # Application dependencies
 
 require:
-    - play
-    - play -> crud
-    - play -> secure
-    
+    - play 
+    - play -> crud 
+    - play -> secure 
+    - play -> html5validation 1.2.2
+    - org.tautua.markdownpapers -> markdownpapers-core 1.2.5

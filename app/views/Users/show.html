@@ -12,13 +12,20 @@
 	
 </div>
 
-
+#{if user?.admin }
+<div class="" id="main">
+#{/if}
+#{else}
 <div class="nosidebar" id="main">
+#{/else}
 
     <div id="sidebar">        
-        
+#{if user?.admin }
+            <h3>&{'administration'}</h3>
+			#{admin-menu /}
+#{/if}
+
     </div>
-    
 	<div id="content">    
 
 		#{if user?.id}
@@ -54,17 +61,17 @@
 		    <input type="hidden" name="user.id" id="id" value="${user?.id}" />
 		    <div class="box tabular">
 				<p><label for="user_login">&{'login_id'}<span class="required"> *</span></label>
-				<input id="user_login" name="user.login" size="25" type="text" value="${user?.login}" #{if user?.id} disabled #{/if}/>
+				#{input for:'user.login', type:'text', id:"user_login", value:user?.login, disabled:user?.id /}
 				<span class="errorExplanation">#{error 'login' /}</span></p>
 			
 				<p><label for="user_firstname">&{'firstname'}<span class="required"> *</span></label>
-				<input id="user_firstname" name="user.firstname" size="30" type="text" value="${user?.firstname}" />
+				#{input for:'user.firstname', type:'text', id:"user_firstname", value:user?.firstname /}
 				<span class="errorExplanation">#{error 'firstname' /}</span></p>
 				<p><label for="user_lastname">&{'lastname'}<span class="required"> *</span></label>
-				<input id="user_lastname" name="user.lastname" size="30" type="text" value="${user?.lastname}" />
+				#{input for:'user.lastname', type:'text', id:"user_lastname", value:user?.lastname /}
 				<span class="errorExplanation">#{error 'lastname' /}</span></p>
 				<p><label for="user_mail">&{'mail'}<span class="required"> *</span></label>
-				<input id="user_mail" name="user.mail" size="30" type="text" value="${user?.mail}" />
+				#{input for:'user.mail', type:'text', id:"user_mail", value:user?.mail /}
 				<span class="errorExplanation">#{error 'mail' /}</span></p>
 				#{secure.check 'admin'}
 				<p><label for="user_admin">&{'admin'}</label>
@@ -76,11 +83,11 @@
 		    	<h3>&{'authentification'}</h3>
 
 				<div id="password_fields" style="">
-					<p><label for="user_password">&{'password'}<span class="required"> *</span></label>
+					<p><label for="user_password">&{'password'}</label>
 					<input id="user_password" name="new_password" size="25" type="password" value=""/>
 				<span class="errorExplanation">#{error 'hashed_password' /}</span><br />
 					<em>&{'password_minlength'}</em></p>
-				<p><label for="user_password_confirmation">&{'confirmation'}<span class="required"> *</span></label>
+				<p><label for="user_password_confirmation">&{'confirmation'}</label>
 				<input id="user_password_confirmation" name="password_confirmation" size="25" type="password" /></p>
 
 				</div>

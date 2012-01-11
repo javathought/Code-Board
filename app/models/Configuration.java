@@ -5,17 +5,23 @@ import java.io.FileFilter;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 
 import play.Logger;
+import play.data.validation.MaxSize;
 import play.db.jpa.Model;
 
 @Entity
 public class Configuration extends Model {
     
 
+	@Column(name="setting_type")
 	public String type;
 	public String look;
+	@MaxSize(2000)
+	@Column(name="text", length=2000)
+	public String welcome_text;
 	
 	public static String getTheme () {
 		Configuration set = find("byType", "General").first();

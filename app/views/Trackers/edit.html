@@ -1,0 +1,65 @@
+#{extends 'main.html' /}
+#{set 'title'}&{'application.title'} » #{if tracker?.id}&{'trackers'} » ${tracker.name} #{/if}
+		#{else}
+		<h2>&{'new_tracker'}</h2>
+		#{/else}#{/set}
+
+
+<div id="header">
+	<h1>&{'trackers'}</h1>
+	<div id="main-menu">
+	</div>
+	
+</div>
+
+
+<div class="" id="main">
+
+    <div id="sidebar">        
+    	<h3>&{'administration'}</h3>
+		#{admin-menu /}
+    </div>
+    
+	<div id="content">    
+
+		#{if tracker?.id}
+		<h2><a href="/admin/trackers">&{'trackers'}</a> » ${tracker.name}</h2>
+		#{/if}
+		#{else}
+		<h2>&{'new_tracker'}</h2>
+		#{/else}
+		
+		#{ifErrors}
+ 	   		<h1>Oops...</h1>
+	 		<div class="errorExplanation" id="errorExplanation">
+	 		<ul>
+		   #{errors}<li>${error}</li>#{/errors}
+ 			</ul></div>
+ 		#{/ifErrors}
+
+		#{form @Trackers.save(), id:'form', method:'POST', enctype:'multipart/form-data'}
+		
+		<div class="splitcontentleft">
+			<div class="box tabular">
+			    <input type="hidden" name="tracker.id" id="id" value="${tracker?.id}" />
+
+				<p><label for="tracker.name">&{'name'}<span class="required"> *</span></label>
+				<input id="tracker_name" name="tracker.name" type="text" value="${tracker?.name}" /></p>
+
+
+			</div>
+			<input name="commit" type="submit" value="&{'save'}" />
+		</div>
+
+		<div class="splitcontentright">
+
+
+		</div>
+
+		#{/form}
+
+        <div style="clear:both;"></div>
+    </div>
+		
+
+</div>

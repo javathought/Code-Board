@@ -29,7 +29,6 @@ public class Users extends Main {
 		render(user);
 	}
 	
-//	@Check("admin")
 	public static void list() {
 		List<User> users = User.find("login != 'root' ").fetch();
 		render(users);
@@ -65,7 +64,7 @@ public class Users extends Main {
 			params.flash(); // add http parameters to the flash scope
 			// validation.keep(); // keep the errors for the next request
 			user.hashed_password = null;
-			render("@show");
+			render("@show", user);
 		}
 
 		if (user.created_on == null) {

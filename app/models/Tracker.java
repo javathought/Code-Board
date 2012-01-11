@@ -10,7 +10,7 @@ import java.util.*;
 public class Tracker extends Model {
 	public String name;
 	public Boolean inRoadmap;
-	public int position;
+	public long position;
 	
 	public String toString() {
 		return name;

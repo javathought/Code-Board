@@ -1,0 +1,56 @@
+#{extends 'main.html' /}
+#{set title}&{'application.title'}#{/set}
+
+<div id="header">
+	<h1>&{'application.title'}</h1>
+	<div id="main-menu"></div>
+	
+</div>
+
+<div class="nosidebar" id="main">
+    <div id="sidebar">        
+        
+        
+    </div>
+    
+	<div id="content">   
+		<div id="login-form">
+			#{form @authenticate()}
+<table>
+<tr>
+    <td align="right"><label for="username">Identifiant :</label></td>
+    <td align="left"><input id="username" name="username" tabindex="1" type="text" /></td>
+</tr>
+
+<tr>
+    <td align="right"><label for="password">Mot de passe:</label></td>
+    <td align="left"><input id="password" name="password" tabindex="2" type="password" /></td>
+</tr>
+<tr>
+    <td></td>
+    <td align="left">
+        
+    </td>
+</tr>
+<tr>
+
+    <td align="left">
+        
+            <!-- a href="//account/lost_password">Mot de passe perdu</a -->
+        
+    </td>
+    <td align="right">
+        <input type="submit" name="login" value="&{'connect'} &#187;" tabindex="5"/>
+    </td>
+</tr>
+</table>			
+			    <!-- input type="submit" class="rounded" value="Se connecter" / -->
+			#{/form}
+		</div>
+	</div>
+</div>
+
+<script type="text/javascript" language="JavaScript">
+  document.getElementById('username').focus();
+</script>
+	
