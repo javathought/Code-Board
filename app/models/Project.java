@@ -51,7 +51,7 @@ public class Project extends Model {
 			query = Project.find("domain in (:domains) " + 
 					" or domain in (select distinct d from Domain d where isPublic = :true )" + (ordered ? " order by created desc" : "")).bind("domains", user.domains).bind("true", true);
 		} else {
-			query = Project.find("domain in (select distinct d from Domain d where isPublic = ? )"+ (ordered ? " order by created desc" : ""), true);
+			query = Project.find("domain in (select distinct d from Domain d where isPublic = ? )", true);
 		}
 		return query;
 	}
