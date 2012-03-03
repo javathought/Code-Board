@@ -1,0 +1,51 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                                       Application.index
+GET     /admin/crud                             module:crud
+GET     /admin/crud/*                           module:crud
+GET		/admin									Settings.index
+GET		/admin/projects							Projects.list
+GET		/admin/projects/{id}					Projects.edit
+GET		/admin/projects/new						Projects.create
+DELETE	/admin/projects/{id}					Projects.delete
+GET		/admin/enumerations						Enumerations.list
+GET		/admin/enumerations/new					Enumerations.create
+DELETE	/admin/enumerations/{id}				Enumerations.delete
+GET		/admin/enumerations/{id}				Enumerations.edit
+POST	/admin/enumerations/move/{id}			Enumerations.move
+GET		/admin/trackers							Trackers.list
+GET		/admin/trackers/new						Trackers.create
+DELETE	/admin/trackers/{id}					Trackers.delete
+GET		/admin/trackers/{id}					Trackers.edit
+POST	/admin/trackers/move/{id}				Trackers.move
+GET		/admin/issue_statuses					States.list
+GET		/admin/issue_statuses/new				States.create
+DELETE	/admin/issue_statuses/{id}				States.delete
+GET		/admin/issue_statuses/{id}				States.edit
+POST	/admin/issue_statuses/move/{id}			States.move
+GET     /admin/users							Users.list
+GET     /admin/users/new						Users.create
+GET     /admin/users/{login}					Users.show
+GET		/admin/settings							Settings.settings
+GET 	/me										Users.showMe
+GET     /projects/{identifier}					Application.project
+GET 	/me/issues								Issues.myIssues
+GET     /projects/{identifier}/issues			Issues.issues
+GET     /projects/{identifier}/issues/			Issues.issues
+GET     /projects/{identifier}/issues/new		Issues.newIssue
+GET     /issues/{id}							Issues.issue
+POST	/api/textile							Application.textile
+POST	/api/markdown							Application.markdown
+
+# Ignore favicon requests
+GET     /favicon.ico                            404
+
+# Map static resources from the /app/public folder to the /public path
+GET     /public/                                staticDir:public
+
+# Catch all
+*       /{controller}/{action}                  {controller}.{action}
+

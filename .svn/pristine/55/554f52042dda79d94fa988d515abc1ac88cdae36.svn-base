@@ -1,0 +1,138 @@
+# You can specialize this file for each language.
+# For example, for French create a messages.fr file
+#
+
+# For use in JavaExtensions.since tag
+since.seconds = il y a %s seconde%s 
+since.minutes = il y a %s minute%s 
+since.hours   = il y a %s heure%s 
+since.days    = il y a %s jour%s 
+since.months  = il y a %s mois
+since.years   = il y a %s année%s 
+since.format  = d MMM yyyy
+
+application.title = Code Board
+isPublic = Public
+date_format = dd/MM/yyyy
+sort = Trier
+are_you_sure = Êtes-vous sûr ?
+error_on_operation = Error on operation
+name = Nom
+delete = Supprimer
+
+#
+to_top = Remonter en premier
+up = Remonter
+down = Descendre
+to_bottom = Descendre en dernier
+ 
+#
+textformat = Formatage du texte
+
+# *** main.html
+login = Connexion
+logout = Déconnexion
+logged_as = Connecté en tant que
+home = Accueil
+my_page = Ma page
+projects = Projets
+administration = Administration
+powered_by = Propulsé par Code Board &copy; 2001
+
+# *** users/list.html + show.html
+
+users = Utilisateurs
+login_id = Identifiant
+firstname = Prénom
+lastname = Nom
+mail = Email
+hashed_password = Password
+admin = Administrateur
+created = Créé le
+last_connected = Dernière connexion
+user.mail=Email
+user.hashed_password=Password
+
+new_user = Nouvel utilisateur
+general = Général
+authentification = Authentification
+password = Mot de passe
+confirmation = Confirmation
+password_minlength = Logueur minimale de 4 caractères.
+
+save = Sauvegarder
+save_and_continue = Sauvegarder et continuer
+
+# *** Application/index.html
+latest_projects = Derniers projets
+
+# *** Projects 
+overview = Aperçu
+overview_issue_tracking = Suivi des demandes
+view_all_issues = Voir toutes les demandes
+parent = Sous-projet de
+identifier = Identifiant
+
+project_name = Projet
+project_public = Public
+project_created = Créé le
+new_project = Nouveau projet
+
+# *** issue.html
+issue = Demande
+issues = Demandes
+new_issue = Nouvelle demande
+tracker = Tracker
+subject = Sujet
+issue.subject = Sujet
+description = Description
+state = Statut
+assignee = Assigné à
+priority = Priorité
+updated = Mis-à-jour
+project = Projet
+issues_affected = Demandes qui me sont assignées
+attributes = Attributs
+
+# States
+percent_done = %% réalisé
+closed = Demande fermée
+new_state = Nouveau statut
+
+#
+
+activity = Activité
+calendar = Calendrier
+news = Nouvelles
+documents = Documents
+wiki = Wiki
+files = Fichiers
+
+create = Créer
+
+# *** Trackers
+trackers = Trackers
+tracker_name = Tracker
+tracker.name = Nom
+new_tracker = Nouveau tracker
+tracker_deleted = Tracker supprimé
+tracker_moved = Tracker déplacé
+
+
+# *** Settings
+settings = Configuration
+connect = Connexion
+issue_statuses = Statuts de demandes
+enumerations = Listes de valeurs
+default= Valeur par défaut
+active = Actif
+new_enumeration = Nouvelle valeur
+enumeration_moved = Valeur déplacée
+theme = Thème
+
+#Validation message
+validation.required=%s est obligatoire
+validation.object = Merci de corriger les erreur ci-dessus ;)
+validation.unique=%s doit être unique
+
+

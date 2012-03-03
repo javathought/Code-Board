@@ -1,0 +1,7 @@
+# Application dependencies
+
+require:
+    - play 
+    - play -> crud 
+    - play -> secure 
+    - org.tautua.markdownpapers -> markdownpapers-core 1.2.5

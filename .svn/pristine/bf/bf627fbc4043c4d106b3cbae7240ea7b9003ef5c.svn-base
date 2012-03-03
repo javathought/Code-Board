@@ -1,0 +1,107 @@
+#{extends 'main.html' /}
+#{set 'title'}&{'application.title'} » #{if user?.id}&{'users'} » ${user.login} #{/if}
+		#{else}
+		<h2>&{'new_user'}</h2>
+		#{/else}#{/set}
+
+
+<div id="header">
+	<h1>&{'users'}</h1>
+	<div id="main-menu">
+	</div>
+	
+</div>
+
+#{if user?.admin }
+<div class="" id="main">
+#{/if}
+#{else}
+<div class="nosidebar" id="main">
+#{/else}
+
+    <div id="sidebar">        
+#{if user?.admin }
+            <h3>&{'administration'}</h3>
+			#{admin-menu /}
+#{/if}
+
+    </div>
+	<div id="content">    
+
+		#{if user?.id}
+		<h2><a href="/admin/users">&{'users'}</a> » ${user.login}</h2>
+		#{/if}
+		#{else}
+		<h2>&{'new_user'}</h2>
+		#{/else}
+		
+		#{ifErrors}
+ 	   		<h1>Oops...</h1>
+	 		<div class="errorExplanation" id="errorExplanation">
+	 		<ul>
+		   #{errors}<li>${error}</li>#{/errors}
+ 			</ul></div>
+ 		#{/ifErrors}
+
+		<div class="tabs">
+		  	<ul>
+		      	<li>
+		      	<a href="/admin/users/${user?.login}" class="selected" id="tab-general" onclick="showTab('general'); this.blur(); return false;">
+		      	&{'general'}</a></li>
+		      	<!-- li><a href="#" id="tab-memberships" onclick="showTab('memberships'); this.blur(); return false;">&{'projects'}</a></li -->
+		    </ul>
+		  	<div class="tabs-buttons" style="display:none;">
+		  	<button class="tab-left" onclick="moveTabLeft(this);"></button>
+		  	<button class="tab-right" onclick="moveTabRight(this);"></button>
+		  	</div>
+		</div>
+	
+	 	<div class="tab-content" id="tab-content-general">
+		    #{form @Users.save(new_password, isAdmin), id:'form', method:'POST', enctype:'multipart/form-data'}
+		    <input type="hidden" name="user.id" id="id" value="${user?.id}" />
+		    <div class="box tabular">
+				<p><label for="user_login">&{'login_id'}<span class="required"> *</span></label>
+				#{input for:'user.login', type:'text', id:"user_login", value:user?.login, disabled:user?.id /}
+				<span class="errorExplanation">#{error 'login' /}</span></p>
+			
+				<p><label for="user_firstname">&{'firstname'}<span class="required"> *</span></label>
+				#{input for:'user.firstname', type:'text', id:"user_firstname", value:user?.firstname /}
+				<span class="errorExplanation">#{error 'firstname' /}</span></p>
+				<p><label for="user_lastname">&{'lastname'}<span class="required"> *</span></label>
+				#{input for:'user.lastname', type:'text', id:"user_lastname", value:user?.lastname /}
+				<span class="errorExplanation">#{error 'lastname' /}</span></p>
+				<p><label for="user_mail">&{'mail'}<span class="required"> *</span></label>
+				#{input for:'user.mail', type:'text', id:"user_mail", value:user?.mail /}
+				<span class="errorExplanation">#{error 'mail' /}</span></p>
+				#{secure.check 'admin'}
+				<p><label for="user_admin">&{'admin'}</label>
+				<input type="checkbox" id="user_admin" name="isAdmin"  #{if user?.admin }checked#{/if} />
+				<span class="errorExplanation">#{error 'admin' /}</span></p>
+				#{/secure.check }
+		    </div>
+			<div class="box tabular">
+		    	<h3>&{'authentification'}</h3>
+
+				<div id="password_fields" style="">
+					<p><label for="user_password">&{'password'}</label>
+					<input id="user_password" name="new_password" size="25" type="password" value=""/>
+				<span class="errorExplanation">#{error 'hashed_password' /}</span><br />
+					<em>&{'password_minlength'}</em></p>
+				<p><label for="user_password_confirmation">&{'confirmation'}</label>
+				<input id="user_password_confirmation" name="password_confirmation" size="25" type="password" /></p>
+
+				</div>
+		    </div>
+	        <p class="crudButtons">
+	            <input type="submit" name="_save" value="&{'save'}" />
+	            <!-- input type="submit" name="_saveAndContinue" value="&{'save_and_continue'}" / -->
+	        </p>
+		    #{/form}
+
+		</div>
+		<div class="tab-content" id="tab-content-memberships" style="display:none">
+		</div>
+		
+	</div>	
+
+</div>
