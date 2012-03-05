@@ -35,9 +35,9 @@ public class Application extends Main {
     }
 	
     public static void index() {
-        List<Project> projects = Project.all().fetch(5);
-//    	User user = User.find("byLogin",Security.connected()).first();
-//        List<Project> projects = Project.findVisibleBy(user, true).fetch(5);
+//        List<Project> projects = Project.all().fetch(5);
+    	User user = User.find("byLogin",Security.connected()).first();
+        List<Project> projects = Project.findVisibleBy(user, true).fetch(5);
 		Configuration setting = Configuration.find("byType", "General").first();
         render(projects, setting);	
 
