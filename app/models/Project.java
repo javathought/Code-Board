@@ -47,9 +47,10 @@ public class Project extends Model {
 
 	public static JPAQuery findVisibleBy(User user, Boolean ordered) {
 		JPAQuery query;
-		if (user != null) {
-			query = Project.find("domain in (:domains) " + 
-					" or domain in (select distinct d from Domain d where isPublic = :true )" + (ordered ? " order by created desc" : "")).bind("domains", user.domains).bind("true", true);
+		if (user != null && ! user.domains.isEmpty() ) {
+			query = Project.find("select p from Project p where p.domain in (:domains) " + 
+					" or p.domain in (select distinct d from Domain d where isPublic = :true )" + 
+					(ordered ? " order by created desc" : "") ).bind("domains", user.domains).bind("true", true);
 		} else {
 			query = Project.find("domain in (select distinct d from Domain d where isPublic = ? )", true);
 		}
