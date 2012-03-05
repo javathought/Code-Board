@@ -35,8 +35,13 @@ public class Application extends Main {
     }
 	
     public static void index() {
-//        List<Project> projects = Project.all().fetch(5);
-    	User user = User.find("byLogin",Security.connected()).first();
+    	User user = null;
+    	// *** IMPORTANT NOTE ***
+    	// Test if a user is connected to handle PostgreSQL ERROR : operator does not exist: character varying = bytea Indice ...
+    	// if passing null to the query
+    	if (Security.isConnected()) {
+        	user = User.find("byLogin",Security.connected()).first();    		
+    	}
         List<Project> projects = Project.findVisibleBy(user, true).fetch(5);
 		Configuration setting = Configuration.find("byType", "General").first();
         render(projects, setting);	
