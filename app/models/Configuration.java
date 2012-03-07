@@ -11,6 +11,7 @@ import javax.persistence.Entity;
 import play.Logger;
 import play.data.validation.MaxSize;
 import play.db.jpa.Model;
+import play.vfs.VirtualFile;
 
 @Entity
 public class Configuration extends Model {
@@ -36,7 +37,9 @@ public class Configuration extends Model {
 	
 	public static List<String> getThemes() {
 		List<String> themes = new ArrayList<String>();
-		File dir = new File("public/themes");
+		VirtualFile vf = VirtualFile.fromRelativePath("/public/themes");
+		File dir = vf.getRealFile();
+//		File dir = new File("public/themes");
 		// The list of files can also be retrieved as File objects
 		File[] files = dir.listFiles();
 
