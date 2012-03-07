@@ -46,7 +46,7 @@ public class Configuration extends Model {
 		// This filter only returns directories
 		FileFilter fileFilter = new FileFilter() {
 		    public boolean accept(File file) {
-		        return file.isDirectory();
+		        return file.isDirectory() && !file.isHidden();
 		    }
 		};
 		files = dir.listFiles(fileFilter);
