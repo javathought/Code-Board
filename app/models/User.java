@@ -1,8 +1,11 @@
 package models;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
 import play.data.validation.Email;
@@ -26,6 +29,13 @@ public class User extends Model {
 	public Date created_on;
 	public Date last_login_on;
 	public String hashed_password;
+	@ManyToMany
+	public List<Domain> domains;
+
+	public User() {
+		domains = new ArrayList<Domain>();
+	}
+	
 	
 	public String toString() {
 		return firstname + " " + lastname;

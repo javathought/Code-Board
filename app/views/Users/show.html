@@ -92,6 +92,17 @@
 
 				</div>
 		    </div>
+		    
+			<div class="box">
+			<h3>&{'domains'}</h3>
+				<div class="domains-list">
+		    	#{list domains, as:'domain'} 
+	            <input id="${domain.id}" type="checkbox" name="user.domains.id" 
+	                    ${user.domains.contains(domain) ? 'checked' : ''} value=${domain.id}>${domain}</input>
+	    		#{/list}
+	    		<input type="hidden" name="user.domains.id" value="" />
+	    		</div>
+		    </div>
 	        <p class="crudButtons">
 	            <input type="submit" name="_save" value="&{'save'}" />
 	            <!-- input type="submit" name="_saveAndContinue" value="&{'save_and_continue'}" / -->

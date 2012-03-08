@@ -2,15 +2,15 @@ package controllers;
 
 import java.util.Calendar;
 import java.util.HashMap;
-import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
+import models.Domain;
 import models.Issue;
 import models.Project;
 import play.data.validation.Valid;
-import play.db.jpa.JPABase;
-import play.mvc.With;
+import play.mvc.After;
+import play.Logger;
 
 public class Projects extends Admin {
 	
@@ -19,15 +19,21 @@ public class Projects extends Admin {
 		render(projects);
 	}
 
+    @After(only={"create", "edit"})
+    private static void renderCombos() {
+		List<Project> projects = Project.findAll();
+		List<Domain> domains = Domain.findAll();
+		render("@edit", projects, domains);
+    }
+	
 	public static void create() {
-		List<Project> projects = Project.find("order by name").fetch();
-		render("@edit", projects);
+		Project project = new Project("");
+		render("@edit", project);
 	}
 	
 	public static void edit(String id) {
 		Project project = Project.find("byIdentifier", id).first();
-		List<Project> projects = Project.findAll();
-		render(project, projects);
+		render(project);
 	}
 	
 	public static void save(@Valid Project project) {

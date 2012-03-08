@@ -7,7 +7,7 @@ since.seconds = il y a %s seconde%s
 since.minutes = il y a %s minute%s 
 since.hours   = il y a %s heure%s 
 since.days    = il y a %s jour%s 
-since.months  = il y a %s mois%s 
+since.months  = il y a %s mois
 since.years   = il y a %s année%s 
 since.format  = d MMM yyyy
 
@@ -117,6 +117,17 @@ tracker.name = Nom
 new_tracker = Nouveau tracker
 tracker_deleted = Tracker supprimé
 tracker_moved = Tracker déplacé
+
+# *** Domains
+domains = Domaines
+domain_name = Domaine
+domain = Domaine
+domain.name = Nom
+new_domain = Nouveau domaine
+domaine_deleted = Domaine supprimé
+domaine_moved = Domaine déplacé
+domain_public = Public
+domain_default = Valeur par défaut
 
 
 # *** Settings

@@ -1,12 +1,11 @@
 package models;
 
 import java.util.Date;
-import java.util.List;
 
-import javax.persistence.CascadeType;
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
-import javax.persistence.OneToMany;
+import javax.persistence.NamedQueries;
+import javax.persistence.NamedQuery;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 
@@ -32,10 +31,30 @@ public class Project extends Model {
 	@Temporal(value=TemporalType.TIMESTAMP)
 	public Date created;
 	public String textformat;
+	@ManyToOne(optional=true)	
+	public Domain domain;
 	
 	
+	public Project(String s) {
+		this.domain = Domain.find("isDefault = ?", true).first();
+	}
+		
+	@Override 
 	public String toString() {
 		return name;
+	}
+	
+
+	public static JPAQuery findVisibleBy(User user, Boolean ordered) {
+		JPAQuery query;
+		if (user != null && ! user.domains.isEmpty() ) {
+			query = Project.find("select p from Project p where p.domain in (:domains) " + 
+					" or p.domain in (select distinct d from Domain d where isPublic = :true )" + 
+					(ordered ? " order by created desc" : "") ).bind("domains", user.domains).bind("true", true);
+		} else {
+			query = Project.find("domain in (select distinct d from Domain d where isPublic = ? )", true);
+		}
+		return query;
 	}
     
 }

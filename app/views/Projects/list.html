@@ -35,8 +35,8 @@
 			<div class="autoscroll" >
 				<table id="actions" class="list projects">
 			    <thead><tr>
-					<th title="Sort by &quot;Project&quot;">&{'project_name'}</th>
-		          <th title="Sort by &quot;Public&quot;">&{'project_public'}</th>
+				  <th title="Sort by &quot;Project&quot;">&{'project_name'}</th>
+		          <!-- th title="Sort by &quot;Public&quot;">&{'project_public'}</th -->
 		          <th title="Sort by &quot;Created&quot;">&{'project_created'}</th>		  
 		          <th></th>      
 				</tr>
@@ -46,10 +46,10 @@
 					#{list projects, as:'project'}
 						<tr id="action-${project.id}" class="hascontextmenu">
 							<td class="project"><a href="/admin/projects/${project.identifier}">${project.name}</a></td>
-					        <td class="checkbox hide-when-print" align="center">
+					        <!-- td class="checkbox hide-when-print" align="center">
 					        #{if project.isPublic }
 					        <img alt="Toggle_check" src="@{'/public/images/toggle_check.png'}" />
-					        #{/if}
+					        #{/if} </td -->
 					        <td class="created"  align="center">${project.created?.format(messages.get('date_format'))}</td>
 							<td class="buttons" >
     							<a href="/admin/projects/${project.id}" class="icon icon-del delete"  >&{'delete'}</span>

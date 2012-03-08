@@ -54,11 +54,19 @@
 					#{input for:'project.name', type:'text', id:"project_name", value:project?.name /}
 				</p>
 
+				<div class="splitcontentleft">
 			    <p><label for="project_parent_id">&{'parent'}</label>
 					#{select 'project.parent.id', items:projects, valueProperty:'id', labelProperty:'name', id:'id', value:"${project?.parent?.id}" } 
 					<option> </option>
 					#{/select}
 				    </p>
+				</div>
+				<div class="splitcontentright">
+			    <p><label for="project_domain">&{'domain'}</label>
+					#{select 'project.domain.id', items:domains, valueProperty:'id', labelProperty:'name', id:'id', value:"${project?.domain?.id}" } 
+					#{/select}
+				    </p>
+				</div>
 	
 				<p><label for="project_description">&{'description'}</label>
 					<textarea id="description" name="project.description." class="textile" style="resize: none;" >${project?.description}</textarea>

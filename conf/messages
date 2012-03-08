@@ -91,6 +91,15 @@ new_tracker = New tracker
 tracker_deleted = Tracker deleted
 tracker_moved = Tracker moved
 
+# *** Domains
+domains = Domains
+domain_name = Domain
+domain = Domain
+new_domain = New domain
+domain_deleted = Domain deleted
+domain_moved = Domain moved
+domain_default = Default
+
 # *** Settings
 settings = Settings
 connect = Login

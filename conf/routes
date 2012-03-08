@@ -8,8 +8,8 @@ GET     /admin/crud                             module:crud
 GET     /admin/crud/*                           module:crud
 GET		/admin									Settings.index
 GET		/admin/projects							Projects.list
-GET		/admin/projects/{id}					Projects.edit
 GET		/admin/projects/new						Projects.create
+GET		/admin/projects/{id}					Projects.edit
 DELETE	/admin/projects/{id}					Projects.delete
 GET		/admin/enumerations						Enumerations.list
 GET		/admin/enumerations/new					Enumerations.create
@@ -21,6 +21,11 @@ GET		/admin/trackers/new						Trackers.create
 DELETE	/admin/trackers/{id}					Trackers.delete
 GET		/admin/trackers/{id}					Trackers.edit
 POST	/admin/trackers/move/{id}				Trackers.move
+GET		/admin/domains							Domains.list
+GET		/admin/domains/new						Domains.create
+DELETE	/admin/domains/{id}						Domains.delete
+GET		/admin/domains/{id}						Domains.edit
+POST	/admin/domains/move/{id}				Trackers.move
 GET		/admin/issue_statuses					States.list
 GET		/admin/issue_statuses/new				States.create
 DELETE	/admin/issue_statuses/{id}				States.delete
@@ -36,7 +41,7 @@ GET 	/me/issues								Issues.myIssues
 GET     /projects/{identifier}/issues			Issues.issues
 GET     /projects/{identifier}/issues/			Issues.issues
 GET     /projects/{identifier}/issues/new		Issues.newIssue
-GET     /issues/{id}							Issues.issue
+GET     /issues/{id}							Issues.editIssue
 POST	/api/textile							Application.textile
 POST	/api/markdown							Application.markdown
 

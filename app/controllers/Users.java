@@ -6,10 +6,10 @@ import java.security.NoSuchAlgorithmException;
 import java.util.Calendar;
 import java.util.List;
 
+import models.Domain;
 import models.User;
-import play.Logger;
 import play.data.validation.Valid;
-import play.mvc.Controller;
+import play.mvc.After;
 import play.mvc.With;
 
 @With(Secure.class)
@@ -28,6 +28,13 @@ public class Users extends Main {
 		User user = User.find("byLogin", login).first();
 		render(user);
 	}
+	
+	@After(only={"create", "show"})
+	private static void listDomains() {
+		List<Domain> domains = Domain.findAll();
+		render("@show", domains);		
+	}
+	
 	
 	public static void list() {
 		List<User> users = User.find("login != 'root' ").fetch();
