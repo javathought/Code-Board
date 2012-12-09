@@ -91,6 +91,14 @@ new_tracker = New tracker
 tracker_deleted = Tracker deleted
 tracker_moved = Tracker moved
 
+# *** Roles
+roles = Roles
+role_name = Role
+role.name = Nom
+new_role = Nouveau role
+role_deleted = Role supprimé
+role_moved = Role déplacé
+
 # *** Domains
 domains = Domains
 domain_name = Domain

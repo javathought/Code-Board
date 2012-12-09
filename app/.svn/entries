@@ -1,37 +1,0 @@
-10
-
-dir
-12
-svn://localhost/codeboard/codeboard-core/trunk/app
-svn://localhost/codeboard
-
-
-
-2011-11-20T00:27:39.918973Z
-6
-pascal
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-d2ca81f5-52ed-4abc-b16b-f881ec77a0a8
-
-models
-dir
-
-controllers
-dir
-
-views
-dir
-
