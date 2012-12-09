@@ -63,13 +63,15 @@ public class Project extends Model {
 	public boolean isVisible() {
 		Boolean visible = false;
 		User user = Security.currentUser();
-		for (Iterator iterator = user.domains.iterator(); iterator.hasNext();) {
-			Domain domain = (Domain) iterator.next();
-			if (domain.equals(domain)) {
-				visible = true;
-				break;
+		if (user != null) {
+	 		for (Iterator iterator = user.domains.iterator(); iterator.hasNext();) {
+				Domain domain = (Domain) iterator.next();
+				if (domain.equals(domain)) {
+					visible = true;
+					break;
+				}
+				
 			}
-			
 		}
 		return (domain.isPublic || visible); 
 	}
