@@ -1,6 +1,7 @@
 package models;
 
 import java.util.Date;
+import java.util.Iterator;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -11,6 +12,8 @@ import javax.persistence.TemporalType;
 
 import org.hibernate.annotations.OnDelete;
 import org.hibernate.annotations.OnDeleteAction;
+
+import controllers.Security;
 
 import play.data.validation.Required;
 import play.db.jpa.Model;
@@ -55,6 +58,20 @@ public class Project extends Model {
 			query = Project.find("domain in (select distinct d from Domain d where isPublic = ? )", true);
 		}
 		return query;
+	}
+	
+	public boolean isVisible() {
+		Boolean visible = false;
+		User user = Security.currentUser();
+		for (Iterator iterator = user.domains.iterator(); iterator.hasNext();) {
+			Domain domain = (Domain) iterator.next();
+			if (domain.equals(domain)) {
+				visible = true;
+				break;
+			}
+			
+		}
+		return (domain.isPublic || visible); 
 	}
     
 }

@@ -10,12 +10,17 @@ public class Security extends Secure.Security {
     }
     
     static boolean check(String profile) {
-        if("admin".equals(profile)) {
+        if("admin".equals(profile)) { 
         	Boolean isAdmin = User.find("byLogin", connected()).<User>first().admin;
             return (isAdmin != null );
-        }
+        }    
         return false;
     }
+
+	public static User currentUser() {
+		return User.find("byLogin", connected()).<User>first();
+	}
+
     
     static void onDisconnected() {
         Application.index();

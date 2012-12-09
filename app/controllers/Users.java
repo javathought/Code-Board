@@ -8,9 +8,8 @@ import java.util.List;
 
 import models.Domain;
 import models.User;
-import play.Logger;
 import play.data.validation.Valid;
-import play.mvc.Controller;
+import play.mvc.After;
 import play.mvc.With;
 
 @With(Secure.class)
@@ -18,7 +17,8 @@ public class Users extends Main {
 
 	@Check("admin")
 	public static void create() {
-		render("@show");
+		User user = new User();
+		render("@show", user);
 	}
 
 	@Check("admin")
@@ -27,9 +27,15 @@ public class Users extends Main {
 			list();
 		}
 		User user = User.find("byLogin", login).first();
-		List<Domain> domains = Domain.findAll();
-		render(user, domains);
+		render(user);
 	}
+	
+	@After(only={"create", "show"})
+	private static void listDomains() {
+		List<Domain> domains = Domain.findAll();
+		render("@show", domains);		
+	}
+	
 	
 	public static void list() {
 		List<User> users = User.find("login != 'root' ").fetch();

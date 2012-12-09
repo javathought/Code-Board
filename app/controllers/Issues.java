@@ -17,28 +17,32 @@ import play.mvc.*;
 public class Issues extends Main {
 
     
-    @After(only={"newIssue", "editIssue"})
+    @SuppressWarnings("unused")
+	@Before(only={"newIssue", "editIssue"})
     private static void loadCombos() {
-		List<Tracker> trackers = Tracker.find("order by position asc").fetch();
-		List<User> users = User.find("login <> 'root' order by login").fetch();
-		List<State> states = State.find("order by position").fetch();
-		List<Enumeration> priorities = Enumeration.find("byType", Enumeration.ISSUE_PRIORITY_TYPE).fetch();    	
-
-		render("@issue", trackers, users, states, priorities);
+    	renderArgs.put("trackers", Tracker.find("order by position asc").fetch());
+    	renderArgs.put("users", User.find("login <> 'root' order by login").fetch());
+    	renderArgs.put("states", State.find("order by position").fetch());
+    	renderArgs.put("priorities", Enumeration.find("byType", Enumeration.ISSUE_PRIORITY_TYPE).fetch());    	
 }
 
 	public static void newIssue(String identifier) {
 		Project project = Project.find("identifier", identifier).first();
 		Issue issue = new Issue(project);
-		Logger.info("issue name = %s ", issue.subject);
 		render("@issue", issue);
 	}
 
     public static void editIssue(Long id) {
     	Issue issue = Issue.findById(id);
+    	
+    	if (! issue.project.isVisible()) {
+    		render("@deny", issue);
+    	} else {
+    		render("@issue", issue);
+    	}
 
-		render("@issue", issue);
     }
+    
 
 	public static void issues(String identifier) {
 			Project project = Project.find("identifier", identifier).first();
