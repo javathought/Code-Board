@@ -1,4 +1,4 @@
-h1. codeboard 
+#codeboard 
 
 Un gestionnaire de ticket développé avec Play!Framework (V1)
 
