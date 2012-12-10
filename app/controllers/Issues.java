@@ -14,7 +14,6 @@ import play.data.validation.Valid;
 import play.data.validation.Validation;
 import play.mvc.*;
 
-@With(Secure.class)
 public class Issues extends Main {
 
     
@@ -25,8 +24,19 @@ public class Issues extends Main {
     	renderArgs.put("users", User.find("login <> 'root' order by login").fetch());
     	renderArgs.put("states", State.find("order by position").fetch());
     	renderArgs.put("priorities", Enumeration.find("byType", Enumeration.ISSUE_PRIORITY_TYPE).fetch());    	
-}
+    }
 
+    @SuppressWarnings("unused")
+    @Before(only={"myIssues"})
+    private static void checkAccess() {
+		if (Security.connected() == null)
+			try {
+				Secure.login();
+			} catch (Throwable e) {
+				Logger.error(e, "Error loading Login page");
+			}
+    }
+    
 	public static void newIssue(String identifier) {
 		Project project = Project.find("identifier", identifier).first();
 		Issue issue = new Issue(project);
@@ -52,7 +62,6 @@ public class Issues extends Main {
 	    }
 
 	public static void myIssues() {
-		
 		List<Issue> issues = Issue.find("assignee.login = ? ", Security.connected()).fetch();
 
 		render("@issues", issues);
