@@ -14,6 +14,7 @@ import play.data.validation.Valid;
 import play.data.validation.Validation;
 import play.mvc.*;
 
+@With(Secure.class)
 public class Issues extends Main {
 
     
@@ -51,6 +52,7 @@ public class Issues extends Main {
 	    }
 
 	public static void myIssues() {
+		
 		List<Issue> issues = Issue.find("assignee.login = ? ", Security.connected()).fetch();
 
 		render("@issues", issues);
