@@ -10,6 +10,9 @@ public class Security extends Secure.Security {
     }
     
     static boolean check(String profile) {
+    	String login = connected();
+    	if (login == null)
+    		return false;
         if("admin".equals(profile)) { 
         	Boolean isAdmin = User.find("byLogin", connected()).<User>first().admin;
             return (isAdmin != null );
@@ -18,6 +21,9 @@ public class Security extends Secure.Security {
     }
 
 	public static User currentUser() {
+    	String login = connected();
+    	if (login == null)
+    		return null;
 		return User.find("byLogin", connected()).<User>first();
 	}
 
