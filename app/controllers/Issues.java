@@ -45,12 +45,12 @@ public class Issues extends Main {
 
     public static void editIssue(Long id) {
     	Issue issue = Issue.findById(id);
-    	
-    	if (! issue.project.isVisible()) {
-    		render("@deny", issue);
-    	} else {
-    		render("@issue", issue);
-    	}
+
+        if (issue.isVisible()) {
+            render("@issue", issue);
+        } else {
+            render("@deny", issue);
+        }
 
     }
     

@@ -41,5 +41,8 @@ public class Issue extends Model {
 		this.priority = Enumeration.find("type = ? and is_default = ?", Enumeration.ISSUE_PRIORITY_TYPE, true).first();
 	}
 
-    
+
+    public boolean isVisible() {
+        return project.isVisible();
+    }
 }
